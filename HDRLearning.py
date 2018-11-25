@@ -25,7 +25,7 @@ hdrDebevec = mergeDebevec.process(images, times, responseDebevec)
 cv2.imwrite("hdrDebevec.hdr", hdrDebevec)
 createTonemapDrago
 (
-float   gamma = 1.0f,
+float   gramma = 1.0f,
 float   saturation = 1.0f,
 float   bias = 0.85f 
 )   
