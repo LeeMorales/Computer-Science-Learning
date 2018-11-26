@@ -28,3 +28,11 @@ for word, count in list(counts.items()):
         bigword = word
         bigcount = count
     print(bigcount, bigword)
+import a,b,c
+a = 10
+b = 10000000000000000000000000000
+if a < b
+c = a * b 
+else 
+c = a + b
+end
