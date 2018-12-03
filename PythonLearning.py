@@ -53,8 +53,9 @@ s1 = ['a,b,c']
 s2 = [1,2,3]
 print (dict(zip(s1,s2)))
 
-
-if a > b:
-    print ("a+b")
+a = input("imput a:")
+b = input("imput b:")
+if a < b:
+    print (a/b, a+b)
 else:
-    print ("a-b")
+    print ("none")
