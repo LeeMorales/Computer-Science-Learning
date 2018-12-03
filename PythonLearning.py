@@ -1,4 +1,4 @@
-print ('Hello world, I am Python');
+print ('Hello world, I am Python')
 print (985*211)
 print (45678+0x12fd2)
 print ('Learn Python in imooc')
@@ -28,11 +28,10 @@ for word, count in list(counts.items()):
         bigword = word
         bigcount = count
     print(bigcount, bigword)
-import a,b,c
-a = 10
-b = 10000000000000000000000000000
-if a < b
-c = a * b 
-else 
-c = a + b
-end
+n = 100
+sum = 0
+counter = 1
+while counter <= n:
+   sum = sum + counter
+counter += 1
+print (sum)
