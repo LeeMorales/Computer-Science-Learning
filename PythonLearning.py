@@ -1,3 +1,22 @@
+#Beautiful is better than ugly.
+#Explicit is better than implicit.
+#Simple is better than complex.
+#Complex is better than complicated.
+#Flat is better than nested.
+#Sparse is better than dense.
+#Readability counts.
+#Special cases aren't special enough to break the rules.
+#Although practicality beats purity.
+#Errors should never pass silently.
+#Unless explicitly silenced.
+#In the face of ambiguity, refuse the temptation to guess.
+#There should be one-- and preferably only one --obvious way to do it.
+#Although that way may not be obvious at first unless you're Dutch.
+#Now is better than never.
+#Although never is often better than *right* now.
+#If the implementation is hard to explain, it's a bad idea.
+#If the implementation is easy to explain, it may be a good idea.
+#Namespaces are one honking great idea -- let's do more of those!
 print ('Hello world, I am Python')
 print (985*211)
 print (45678+0x12fd2)
@@ -31,7 +50,16 @@ for word, count in list(counts.items()):
 n = 100
 sum = 0
 counter = 1
-while counter <= n:
+if counter <= 100:
+        pass
+else: 
    sum = sum + counter
-counter += 1
 print (sum)
+
+
+
+
+print (sum(range(101)))
+s1 = ['a,b,c']
+s2 = [1,2,3]
+print (dict(zip(s1,s2)))
