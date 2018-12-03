@@ -1,4 +1,4 @@
-data_dir = 'c:\用户\grand\图片\壁纸'
+data_dir = 'C:\users\grand\Pictures\Wallpapers'
 image_datasets = {x: datasets.ImageFolder(os.path.join(data_dir, x),
                                           data_transforms[x])
                   for x in ['train', 'val']}
