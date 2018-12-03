@@ -55,10 +55,6 @@ if counter <= 100:
 else: 
    sum = sum + counter
 print (sum)
-
-
-
-
 print (sum(range(101)))
 s1 = ['a,b,c']
 s2 = [1,2,3]
