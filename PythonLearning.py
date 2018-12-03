@@ -56,6 +56,6 @@ print (dict(zip(s1,s2)))
 a = input("imput a:")
 b = input("imput b:")
 if a < b:
-    print (a/b, a+b)
+    print (int(a)/int(b), int(a)+int(b))
 else:
     print ("none")
