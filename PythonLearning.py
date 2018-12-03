@@ -53,7 +53,7 @@ s1 = ['a,b,c']
 s2 = [1,2,3]
 print (dict(zip(s1,s2)))
 
-import a, b
+
 if a > b:
     print ("a+b")
 else:
