@@ -50,12 +50,12 @@ for word, count in list(counts.items()):
 n = 100
 sum = 0
 counter = 1
-if counter <= 100:
+if counter >= 100:
         pass
 else: 
    sum = sum + counter
 print (sum)
-print (sum(range(101)))
+
 s1 = ['a,b,c']
 s2 = [1,2,3]
 print (dict(zip(s1,s2)))
