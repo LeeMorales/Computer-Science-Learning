@@ -31,10 +31,10 @@ s = (x1+x100)*100/2
 print (s)
 s = 'Python was started in 1989 by "Guido".Python is free and easy to learn.'
 print (s)
+"""
 name = input('Enter file:')
 handle = open(name, 'r')
 counts = dict()
-
 for line in handle:
     words = line.split()
     for word in words:
@@ -134,3 +134,34 @@ if (id(e) != id(r)):
     print("E is not the R")
 else:
     print("E is the R")
+"""    
+# |  运算符                        |      描述
+#-------------------------------------------------------------------------------------------------------------
+# |  **	                          |     指数 (最高优先级)
+# |  ~ + -	                      |     按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)
+# |  * / % //                     |     乘，除，取模和取整除
+# |  + -	                      |     加法减法
+# |  >> <<                        |     右移，左移运算符
+# |  &	                          |     位 'AND'
+# |  ^ |                          |     位运算符
+# |  <= < > >=	                  |     比较运算符
+# |  <> == !=	                  |     等于运算符
+# |  = %= /= //= -= += *= **=	  |     赋值运算符
+# |  is/is not	                  |     身份运算符
+# |  in not in	                  |     成员运算符
+# |  and or not	                  |     逻辑运算符
+#Example
+a = int(input("Input the A: "))
+b = int(input("Input the B: "))
+c = int(input("Input the C: "))
+d = int(input("Input the D: "))
+e = int(input("Input the E: "))
+ 
+e = (a + b) * c / d       
+print ("(a + b) * c / d 运算结果为：",  e)
+e = ((a + b) * c) / d     
+print ("((a + b) * c) / d 运算结果为：",  e)
+e = (a + b) * (c / d);   
+print ("(a + b) * (c / d) 运算结果为：",  e)
+e = a + (b * c) / d;      
+print ("a + (b * c) / d 运算结果为：",  e)
