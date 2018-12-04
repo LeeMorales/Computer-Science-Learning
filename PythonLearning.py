@@ -59,3 +59,11 @@ if a < b:
     print (int(a)/int(b), int(a)+int(b))
 else:
     print ("none")
+
+a = int(input("imput a: "))
+b = int(input("imput b: "))
+c = int(input("imput c: "))
+if a > b:
+    print(a*b, a*b*c, c%a, a%b*c+a)
+else:
+    print(a%b)
