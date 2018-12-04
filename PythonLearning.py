@@ -31,6 +31,7 @@ s = (x1+x100)*100/2
 print (s)
 s = 'Python was started in 1989 by "Guido".Python is free and easy to learn.'
 print (s)
+
 name = input('Enter file:')
 handle = open(name, 'r')
 counts = dict()
@@ -108,3 +109,15 @@ if (k or z):
     print("all true or one of them are true")
 else:
     print("all none true")
+
+Q = int(input("input the Q: "))
+W = int(input("Input the W: "))
+list = [112, 223, 554, 1, 2, 3, 4, 5]
+if (Q in list):
+    print(Q)
+else:
+    print(W)
+if (W not in list):
+    print("not in the list")
+else:
+    print("W is in the list and the W is ", W)
