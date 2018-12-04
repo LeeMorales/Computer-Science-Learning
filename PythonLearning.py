@@ -32,6 +32,7 @@ print (s)
 s = 'Python was started in 1989 by "Guido".Python is free and easy to learn.'
 print (s)
 ############################################################################################################
+print("下面是文本文件数字比大小程序")
 name = input('Enter file:')
 handle = open(name, 'r')
 counts = dict()
@@ -48,6 +49,7 @@ for word, count in list(counts.items()):
         bigcount = count
     print(bigcount, bigword)
 ###############################################################################################################
+print("字典程序")
 n = 100
 s1 = ['a,b,c']
 s2 = [1,2,3]
