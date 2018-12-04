@@ -31,7 +31,6 @@ s = (x1+x100)*100/2
 print (s)
 s = 'Python was started in 1989 by "Guido".Python is free and easy to learn.'
 print (s)
-"""
 name = input('Enter file:')
 handle = open(name, 'r')
 counts = dict()
@@ -164,7 +163,6 @@ e = (a + b) * (c / d);
 print ("(a + b) * (c / d) 运算结果为：",  e)
 e = a + (b * c) / d;      
 print ("a + (b * c) / d 运算结果为：",  e)
-"""
 x = int(input("Please Input the number"))
 if x >= 10:
    a = int(x * (x+1))
