@@ -17,6 +17,7 @@
 #If the implementation is hard to explain, it's a bad idea.
 #If the implementation is easy to explain, it may be a good idea.
 #Namespaces are one honking great idea -- let's do more of those!
+
 print ('Hello world, I am Python')
 print (985*211)
 print (45678+0x12fd2)
@@ -164,6 +165,11 @@ if x >= 10:
 else:
    a = int(x**x)
 print(a)
+
 ################################################################################################################################
 print("斐波那契数列")
-a = int()
+a = int(input("Please Input the A: "))
+b = int(input("Please Input the B: "))
+while b < 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:
+    print(b)
+    a, b = b, a+b
