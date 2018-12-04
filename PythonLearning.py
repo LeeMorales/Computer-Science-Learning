@@ -134,7 +134,6 @@ if (id(e) != id(r)):
     print("E is not the R")
 else:
     print("E is the R")
-"""    
 # |  运算符                        |      描述
 #-------------------------------------------------------------------------------------------------------------
 # |  **	                          |     指数 (最高优先级)
@@ -165,3 +164,10 @@ e = (a + b) * (c / d);
 print ("(a + b) * (c / d) 运算结果为：",  e)
 e = a + (b * c) / d;      
 print ("a + (b * c) / d 运算结果为：",  e)
+"""
+x = int(input("Please Input the number"))
+if x >= 10:
+   a = int(x * (x+1))
+else:
+   a = int(x**x)
+print(a)
