@@ -199,3 +199,8 @@ class Solution:
                 k += 1
         return nums_len
 #########################################################################################################################################
+print("Leetcode算法学习")
+myfloat = 7.0
+print(myfloat)
+myfloat = float(7)
+print(myfloat)
