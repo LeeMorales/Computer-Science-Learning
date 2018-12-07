@@ -1,6 +1,3 @@
-# coding: utf8
-
-
 class Bag(object):
 
     def __init__(self, maxsize=10):
