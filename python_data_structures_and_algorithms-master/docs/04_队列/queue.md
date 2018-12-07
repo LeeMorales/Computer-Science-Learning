@@ -85,3 +85,5 @@ for i in range(100):
 # 思考题
 - 你能用 python 的 deque 来实现 queue ADT 吗？
 - 哪些经典算法里用到了队列呢？
+
+
