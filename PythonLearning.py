@@ -218,3 +218,5 @@ if isinstance(myint, int) and myint == 20:
     print("Integer: %d" % myint)
 
 ########################################################################################################################################3#
+print("迭代器")
+list = [int(input("Please input the list"))]
