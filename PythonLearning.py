@@ -220,3 +220,6 @@ if isinstance(myint, int) and myint == 20:
 ########################################################################################################################################3#
 print("迭代器")
 list = [int(input("Please input the list"))]
+a = iter(list)
+for x in a:
+    print (x)
