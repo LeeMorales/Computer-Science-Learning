@@ -22,7 +22,7 @@ responseDebevec = calibrateDebevec.process(images, times)
 mergeDebevec = cv2.createMergeDebevec()
 hdrDebevec = mergeDebevec.process(images, times, responseDebevec)
 # 保存图像
-cv2.imwrite("hdrDebevec.hdr", hdrDebevec)
+cv2.imwrite("hdrDebevec.hdr", hdrDebevec).0
 createTonemapDrago
 (
 float   gramma = 1.0f,
