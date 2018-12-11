@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.grand.example">
+
+    <application>
+
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+
+        <service android:name="com.example.grand.example.MyMessagingService">
+        </service>
+
+        <receiver android:name="com.example.grand.example.MessageReadReceiver">
+            <intent-filter>
+                <action android:name="com.example.grand.example.ACTION_MESSAGE_READ"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.example.grand.example.MessageReplyReceiver">
+            <intent-filter>
+                <action android:name="com.example.grand.example.ACTION_MESSAGE_REPLY"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
