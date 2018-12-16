@@ -54,7 +54,7 @@ simple data types: 这种数据类型不能再细分成更小的部分，例子 
 complex data types: 它们由多个 simple data type 或 complex data type 的组件构成，在 Python 中的例子有 object, string, list, dict 等。
 
 #抽象
-计算机科学中有两种常见的抽象：
+计算机科学中有两种常见的抽象：,
 
 procedural(functiona) abstraction: 过程抽象，指使用一个函数或方法而忽略它的具体实现。
 data abstraction: 数据抽象，指数据类型的属性（值和操作方法）与数据类型的具体实现分离。
