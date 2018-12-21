@@ -5,3 +5,8 @@ def sum(arr):
    return total
 
 print(sum([1, 2, 3, 4])) 
+###################################
+def sum(list):
+      if list == []:
+          return 0
+          return list[0] + sum(list[1:])
