@@ -10,5 +10,4 @@ def quicksort(array):
     # 由所有大于基准值的元素所组成的组数组
     greater = [i for i in array[1:] if i > pivot]
     return quicksort(less) + [pivot] + quicksort(greater)
-
 print(quicksort([10, 5, 2, 3]))
