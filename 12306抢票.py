@@ -28,7 +28,7 @@ return '-'.join([str(now.year), str(add_zero(now.month)), str(add_zero(now.day))
 # 格式化输入日期 # 如： # 8-14 -> 2016-08-14 # 2016:8:14 -> 2016-08-14 #  -> 2016-08-14 def date_format(input_date): if not input_date:
         return default_date()
     res = re.match(r'(([0-9]{4})[-|\\|:])?([0-9]{1,2})[-|\\|:]([0-9]{2})', input_date)
-    if res:
+if res:
         year  = res.group(2)
         month = res.group(3)
         day   = res.group(4)
@@ -40,8 +40,8 @@ return '-'.join([str(now.year), str(add_zero(now.month)), str(add_zero(now.day))
             month = now.month
         if not day:
             day = now.day
-        return '-'.join([str(year), add_zero(str(month)), str(day)])
-    else:
+            return '-'.join([str(year), add_zero(str(month)), str(day)])
+else:
         print ('输入日期格式错误')
         sys.exit(-1)
 
@@ -127,8 +127,7 @@ return '-'.join([str(now.year), str(add_zero(now.month)), str(add_zero(now.day))
         with open(addr_cache_file, 'w') as fp:
             fp.write(city)
     return city
-
-def get_yn_input(msg): while True:
+    def get_yn_input(msg): while True:
         res = raw_input('%s，是请按回车，不是请输入n：' % msg)
         if res in ('', 'n'):
             break return True if res == None else False # 默认模式 def guide(): try:
