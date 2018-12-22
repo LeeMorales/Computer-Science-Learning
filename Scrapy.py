@@ -2,7 +2,7 @@
 import urllib
 from webscraping import xpath,common
 def get_data(url):
-    req = urllib.Request(url)
+    req = urllib.request.urlopen(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.8.1.14) Gecko/20080404 (FoxPlus) Firefox/2.0.0.14')
     reponse = urllib.request.urlopen(req)
     html = reponse.read()

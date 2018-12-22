@@ -2,7 +2,7 @@
 import argparse
 import os
 import json
-import urllib2
+import urllib
 import ssl
 import sys
 import re
@@ -16,31 +16,24 @@ ADDR_CACHE_FILE = '.addr'
 CITY_LIST_URL   = 'https://kyfw.12306.cn/otn/resources/js/framework/station_name.js'
 ACTION_URL      = 'https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date={train_time}&leftTicketDTO.from_station={from_city}&leftTicketDTO.to_station={to_city}&purpose_codes={ticket_type}'
 SSL_CTX         = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
-
-# 对月份进行补零 def add_zero(month): if int(month) < 10:
 month = '0' + str(int(month))
 return month
-
-# 默认为今天 def default_date():
 now = datetime.now()
 return '-'.join([str(now.year), str(add_zero(now.month)), str(add_zero(now.day))])
-
-# 格式化输入日期 # 如： # 8-14 -> 2016-08-14 # 2016:8:14 -> 2016-08-14 #  -> 2016-08-14 def date_format(input_date): if not input_date:
-        return default_date()
-    res = re.match(r'(([0-9]{4})[-|\\|:])?([0-9]{1,2})[-|\\|:]([0-9]{2})', input_date)
+return default_date(
+res = re.match(r'(([0-9]{4})[-|\\|:])?([0-9]{1,2})[-|\\|:]([0-9]{2})', input_date)
 if res:
         year  = res.group(2)
         month = res.group(3)
         day   = res.group(4)
-
         now = datetime.now()
         if not year:
             year = now.year
-        if not month:
-            month = now.month
-        if not day:
-            day = now.day
-            return '-'.join([str(year), add_zero(str(month)), str(day)])
+            if not month:
+                month = now.month
+                if not day:
+                    day = now.day
+                    return '-'.join([str(year), add_zero(str(month)), str(day)])
 else:
         print ('输入日期格式错误')
         sys.exit(-1)
