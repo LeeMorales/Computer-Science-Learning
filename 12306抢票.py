@@ -1,4 +1,5 @@
-#!/usr/bin/python #-*- coding:utf-8 -*- import argparse
+#!/usr/bin/python #-*- coding:utf-8 -*- 
+import argparse
 import os
 import json
 import urllib2
@@ -17,12 +18,12 @@ ACTION_URL      = 'https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.tra
 SSL_CTX         = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
 
 # 对月份进行补零 def add_zero(month): if int(month) < 10:
-        month = '0' + str(int(month))
-    return month
+month = '0' + str(int(month))
+return month
 
 # 默认为今天 def default_date():
-    now = datetime.now()
-    return '-'.join([str(now.year), str(add_zero(now.month)), str(add_zero(now.day))])
+now = datetime.now()
+return '-'.join([str(now.year), str(add_zero(now.month)), str(add_zero(now.day))])
 
 # 格式化输入日期 # 如： # 8-14 -> 2016-08-14 # 2016:8:14 -> 2016-08-14 #  -> 2016-08-14 def date_format(input_date): if not input_date:
         return default_date()
