@@ -1,4 +1,3 @@
-#导入urllib2库，用于获取网页
 import urllib
 from webscraping import xpath,common
 def get_data(url):
