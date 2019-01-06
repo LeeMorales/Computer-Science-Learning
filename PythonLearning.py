@@ -288,3 +288,16 @@ def selectionSort(arr):
       newArr.append(arr.pop(smallest))
   return newArr
 print(selectionSort([5, 3, 6, 2, 10]))
+##################################################################################################################################
+print("递归")
+def greet(name):
+    print ("hello")
+    def greet2(name):
+        print (("getting ready to say goodbye"))
+    print ("bye")
+
+def f(x):
+    if x ==1：
+        return 1
+    else:
+        return x * f(x-1)
