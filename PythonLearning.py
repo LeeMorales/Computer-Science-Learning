@@ -590,7 +590,7 @@ def search(lines, pattern , history = 5):
 print("数据结构与算法2")
 import heapq 
 nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
-print(heapq.nlargest(3, nums)   #输出最大的三个元素
+print(heapq.nlargest(3, nums)
 print(heapq.nsmallest(3, nums)  #输出最小的三个元素
 
 nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
