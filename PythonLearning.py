@@ -295,9 +295,423 @@ def greet(name):
     def greet2(name):
         print (("getting ready to say goodbye"))
     print ("bye")
+#####################################################################################################################################
+print("基线条件和递归条件")
+def countdown(i):
+    print i
+  #基线条件
+  if i <= 1:
+    return 
+  #递归条件
+  else:
+    countdown (i-1)
+#####################################################################################################################################
+print("D&C和快速排序")
+def sum(arr):
+       total = 0
+   for x in arr:
+    total += x
+   return total
+
+print sum([1, 2, 3, 4])     
+def quicksort(array):
+      if len(array) < 2:
+    # 基线条件，为空或只包含一个元素的数组是“有序”的
+    return array
+  else:
+    # 递归条件
+    pivot = array[0]
+    # 由所有小于等于基准值的元素所组成的组数组
+    less = [i for i in array[1:] if i <= pivot]
+    # 由所有大于基准值的元素所组成的组数组
+    greater = [i for i in array[1:] if i > pivot]
+    return quicksort(less) + [pivot] + quicksort(greater)
+
+print(quicksort([10, 5, 2, 3]))
+####################################################################################################################################
+print("散列表")
+#创建一个空的散列表
+book = dict()
+#创建后，在里面添加元素
+book["内存"] = 110       #一条 内存 110  元
+book["CPU"] = 3700       #一颗 CPU  3700 元
+book["硬盘"] = 119       #一块 硬盘 119  元
+######################################################################################################################################
+print("图与广度优先搜索")
+from collections import deque
+
+def person_is_seller(name):
+      return name[-1] == 'm'
+
+graph = {}
+graph["you"] = ["alice", "bob", "claire"]
+graph["bob"] = ["anuj", "peggy"]
+graph["alice"] = ["peggy"]
+graph["claire"] = ["thom", "jonny"]
+graph["anuj"] = []
+graph["peggy"] = []
+graph["thom"] = []
+graph["jonny"] = []
+
+def search(name):
+    search_queue = deque()
+    search_queue += graph[name]
+    # This array is how you keep track of which people you've searched before.
+    searched = []
+    while search_queue:
+        person = search_queue.popleft()
+        # Only search this person if you haven't already searched them.
+        if person not in searched:
+            if person_is_seller(person):
+                print person + " is a mango seller!"
+                return True
+            else:
+                search_queue += graph[person]
+                # Marks this person as searched
+                searched.append(person)
+    return False
+
+search("you")
+####################################################################################################################################################、
+print("狄克斯特拉算法")
+graph = {}
+graph["start"] = {}
+graph["start"]["a"] = 6
+graph["start"]["b"] = 2
+
+graph["a"] = {}
+graph["a"]["fin"] = 1
+
+graph["b"] = {}
+graph["b"]["a"] = 3
+graph["b"]["fin"] = 5
+
+graph["fin"] = {}
+
+
+infinity = float("inf")
+costs = {}
+costs["a"] = 6
+costs["b"] = 2
+costs["fin"] = infinity
+
+
+parents = {}
+parents["a"] = "start"
+parents["b"] = "start"
+parents["fin"] = None
+
+processed = []
+
+def find_lowest_cost_node(costs):
+    lowest_cost = float("inf")
+    lowest_cost_node = None    
+    for node in costs:
+        cost = costs[node]        
+        if cost < lowest_cost and node not in processed:           
+            lowest_cost = cost
+            lowest_cost_node = node
+    return lowest_cost_node
+node = find_lowest_cost_node(costs)
+while node is not None:
+    cost = costs[node]    
+    neighbors = graph[node]
+    for n in neighbors.keys():
+        new_cost = cost + neighbors[n]       
+        if costs[n] > new_cost:            
+            costs[n] = new_cost            
+            parents[n] = node   
+    processed.append(node)   
+    node = find_lowest_cost_node(costs)
+print("Cost from the start to each node:")
+print(costs)
+######################################################################################################################################
+print("贪婪算法")
+states_needed = set(["mt", "wa", "or", "id", "nv", "ut", "ca", "az"])
+
+stations = {}
+stations["kone"] = set(["id", "nv", "ut"])
+stations["ktwo"] = set(["wa", "id", "mt"])
+stations["kthree"] = set(["or", "nv", "ca"])
+stations["kfour"] = set(["nv", "ut"])
+stations["kfive"] = set(["ca", "az"])
+
+final_stations = set()
+
+while states_needed:
+  best_station = None
+  states_covered = set()
+  for station, states in stations.items():
+    covered = states_needed & states
+    if len(covered) > len(states_covered):
+      best_station = station
+      states_covered = covered
+
+  states_needed -= states_covered
+  final_stations.add(best_station)
+
+print(final_stations)
+##############################################################################################################################################
+print("二叉树")
+class Node:
+    def __init__(self, data):
+        self.left = None
+        self.right = None
+        self.data = data
+    def PrintTree(self):
+        print(self.data)
+root = Node(10)
+root.PrintTree()
+class Node:
+    def __init__(self, data):
+        self.left = None
+        self.right = None
+        self.data = data
+    def insert(self, data):
+        if self.data:
+            if data < self.data:
+                if self.left is None:
+                    self.left = Node(data)
+                else:
+                    self.left.insert(data)
+            elif data > self.data:
+                if self.right is None:
+                    self.right = Node(data)
+                else:
+                    self.right.insert(data)
+        else:
+            self.data = data
+    def PrintTree(self):
+        if self.left:
+            self.left.PrintTree()
+        print( self.data),
+        if self.right:
+            self.right.PrintTree()
+root = Node(12)
+root.insert(6)
+root.insert(14)
+root.insert(3)
+root.PrintTree()
+###############################################################################################################################################
+print("傅里叶变换")
+import numpy as np
+from scipy.fftpack import fft,ifft
+import matplotlib.pyplot as plt
+import seaborn
+
+
+#采样点选择1400个，因为设置的信号频率分量最高为600赫兹，根据采样定理知采样频率要大于信号频率2倍，所以这里设置采样频率为1400赫兹（即一秒内有1400个采样点，一样意思的）
+x=np.linspace(0,1,1400)      
+
+#设置需要采样的信号，频率分量有180，390和600
+y=7*np.sin(2*np.pi*180*x) + 2.8*np.sin(2*np.pi*390*x)+5.1*np.sin(2*np.pi*600*x)
+
+yy=fft(y)                     #快速傅里叶变换
+yreal = yy.real               # 获取实数部分
+yimag = yy.imag               # 获取虚数部分
+
+yf=abs(fft(y))                # 取绝对值
+yf1=abs(fft(y))/len(x)           #归一化处理
+yf2 = yf1[range(int(len(x)/2))]  #由于对称性，只取一半区间
+
+xf = np.arange(len(y))        # 频率
+xf1 = xf
+xf2 = xf[range(int(len(x)/2))]  #取一半区间
+
+
+plt.subplot(221)
+plt.plot(x[0:50],y[0:50])   
+plt.title('Original wave')
+
+plt.subplot(222)
+plt.plot(xf,yf,'r')
+plt.title('FFT of Mixed wave(two sides frequency range)',fontsize=7,color='#7A378B')  #注意这里的颜色可以查询颜色代码表
+
+plt.subplot(223)
+plt.plot(xf1,yf1,'g')
+plt.title('FFT of Mixed wave(normalization)',fontsize=9,color='r')
+
+plt.subplot(224)
+plt.plot(xf2,yf2,'b')
+plt.title('FFT of Mixed wave)',fontsize=10,color='#F08080')
+
+
+plt.show()
+##############################################################################################################################################
+print("并行，分布式算法")
+import multiprocessing
 
 def f(x):
-    if x ==1：
-        return 1
-    else:
-        return x * f(x-1)
+    return x * x
+
+cores = multiprocessing.cpu_count()
+pool = multiprocessing.Pool(processes=cores)
+xs = range(5)
+
+# method 1: map
+print pool.map(f, xs)  # prints [0, 1, 4, 9, 16]
+
+# method 2: imap
+for y in pool.imap(f, xs):
+    print y            # 0, 1, 4, 9, 16, respectively
+
+# method 3: imap_unordered
+for y in pool.imap_unordered(f, xs):
+    print(y)           # may be in any order
+####################################################################################################################################################################
+print("数据结构与算法1")
+def drop_first_last(grades)
+    first, *middle, last = grades
+    return avg(middle)
+
+records = [
+     ('foo', 1, 2),
+     ('bar', 'hello'),
+     ('foo', 3, 4),
+]
+def do_foo(x,y):
+    print ('foo', x, y)
+def do_bar(s):
+    print('bar', s)
+for tag, *args in records:
+    if tag == 'foo':
+        do foo(*args)
+elif tag == 'bar':
+       do_bar(*args)
+
+items = [1, 10, 7, 4, 5, 9]
+head, *tail = items
+print(head),
+print('    ')
+print(tail)
+
+from collections import deque
+def search(lines, pattern , history = 5):
+    previous_lines = deque(maxlen = history)
+    for line in lines:
+        if pattern in line:
+          yield line, previous_lines
+        previous_lines.append(line)
+########################################################################################################################################################################
+print("数据结构与算法2")
+import heapq 
+nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+print(heapq.nlargest(3, nums)   #输出最大的三个元素
+print(heapq.nsmallest(3, nums)  #输出最小的三个元素
+
+nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+import heapq
+heap = list(nums)
+heapq.heapify(heap)
+print (heap)
+
+import heapq
+class priortyQueue
+   def_init_(self):
+      self.queue = []
+      self._index = 0
+def push(self, item, priority):
+    heapq.heappush(self._queue, (-priority, self._index, item))
+    self,_index += 1
+def pop(self):
+    return heapq.heappop(self._queue)[-1]
+################################################################################################################################
+print("数据结构与算法3")
+d = {
+    'a' : [1, 2, 3],
+    'b' : [4, 5]
+}
+e = {
+    'a' : [1, 2, 3],
+    'b' : [4, 5]
+}
+from collection improt OrderedDict
+d = OrderedDict()
+d['foo'] = 1
+d['bar'] = 2
+d['spam'] = 3
+d['grok'] = 4
+for key in d:
+print(key, d[key])
+#####################################################################################################################################
+print("数据结构与算法4")
+def dedupe(items):
+    seen = set()
+    for item in items:
+      if item not in seen
+         yield item
+         seen.add(item)
+
+def dedupe(items, key = None):
+    seen = set()
+    for item in items:
+        val = item if key is None else key(item)
+        if val not in seen:
+           yield item
+           seen.add(val)
+
+SHARES = slice(20, 32)
+PRICE = slice(40, 48)
+cost = int(record[20:32]) * float(record[40:48])
+
+def most_freqency():
+    words = [
+        'look', 'into', 'my', 'eyes', 'look', 'into', 'my', 'eyes',
+        'the', 'eyes', 'the', 'eyes', 'the', 'eyes', 'not', 'around', 'the',
+        'eyes', "don't", 'look', 'around', 'the', 'eyes', 'look', 'into',
+        'my', 'eyes', "you're", 'under'
+    ]
+    from collections import Counter
+    word_counts = Counter(words)
+    # 出现频率最高的3个单词
+    top_three = word_counts.most_common(3)
+    print(top_three)
+    # Outputs [('eyes', 8), ('the', 5), ('look', 4)]
+
+if __name__ == '__main__':
+    most_freqency()
+#############################################################################################################################################
+print("数据结构与算法5")
+class User:
+       def_init_(self, user_id):
+      self.user_id = user_id
+   def_repr_(self):
+      return 'User({})'.format(self.user_id
+users = [User(23). User(3), User(99)]
+sorted(Users, key = lambda u: u.user_id)
+
+rows = [
+   {'address': '1390 S Lee', 'date', '01/07/2019'},
+   {'address': '1391 S Mark', 'date', '01/06/2019'},
+   {'address': '1392 S Franklin', 'date', '01/05/2019'},
+   {'address': '1393 S Kevin', 'date', '01/04/2019'},
+   {'address': '1394 S Marcus', 'date', '01/03/2019'},
+   {'address': '1395 S Sherlock', 'date', '01/02/2019'},
+   {'address': '1396 S Watson', 'date', '01/01/2019'},
+   {'address': '1397 S Jane', 'date', '12/31/2018'},
+   {'address': '1398 S Miles Morales', 'date', '12/30/2018'},
+]
+from operator import itemgetter
+from itertools import groupby
+rows.sort(key=itemgetter('date'))
+for date, items in groupby(rows, key = itemgetter('date')):
+    print(date）
+    for i in items:
+        print(' ', i)
+
+from collections import defaultdict
+rows_by_date = defaultdict(list)
+for row in rows
+    rows_by_date[row['date']].append(row)
+
+
+valuse = ['1', '2', '-3', '-', '4', 'N/A', '5']
+def is_int(val)
+    try:
+       x = int(val)
+       return True
+    except ValueError：
+       return False
+ivals = list(filter(is_int, values))
+print(ivals)
+########################################################################################################################
