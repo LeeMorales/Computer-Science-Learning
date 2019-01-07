@@ -298,36 +298,29 @@ def greet(name):
 #####################################################################################################################################
 print("基线条件和递归条件")
 def countdown(i):
-    print i
-  #基线条件
-  if i <= 1:
-    return 
-  #递归条件
-  else:
-    countdown (i-1)
+    print(i)
+    if i <= 1:
+        return 
+    else:
+        countdown (i-1)
 #####################################################################################################################################
 print("D&C和快速排序")
 def sum(arr):
        total = 0
-   for x in arr:
-    total += x
-   return total
+       for x in arr:
+           total += x
+           return total
 
-print sum([1, 2, 3, 4])     
+print (sum([1, 2, 3, 4]))     
 def quicksort(array):
       if len(array) < 2:
-    # 基线条件，为空或只包含一个元素的数组是“有序”的
-    return array
-  else:
-    # 递归条件
-    pivot = array[0]
-    # 由所有小于等于基准值的元素所组成的组数组
-    less = [i for i in array[1:] if i <= pivot]
-    # 由所有大于基准值的元素所组成的组数组
-    greater = [i for i in array[1:] if i > pivot]
-    return quicksort(less) + [pivot] + quicksort(greater)
-
-print(quicksort([10, 5, 2, 3]))
+          return array
+      else:
+              pivot = array[0]
+              less = [i for i in array[1:] if i <= pivot]
+              greater = [i for i in array[1:] if i > pivot]
+              return quicksort(less) + [pivot] + quicksort(greater)
+              print(quicksort([10, 5, 2, 3]))
 ####################################################################################################################################
 print("散列表")
 #创建一个空的散列表
@@ -363,7 +356,7 @@ def search(name):
         # Only search this person if you haven't already searched them.
         if person not in searched:
             if person_is_seller(person):
-                print person + " is a mango seller!"
+                print (person + " is a mango seller!")
                 return True
             else:
                 search_queue += graph[person]
@@ -549,19 +542,21 @@ pool = multiprocessing.Pool(processes=cores)
 xs = range(5)
 
 # method 1: map
-print pool.map(f, xs)  # prints [0, 1, 4, 9, 16]
+print (pool.map(f, xs))  # prints [0, 1, 4, 9, 16]
 
 # method 2: imap
 for y in pool.imap(f, xs):
     print y            # 0, 1, 4, 9, 16, respectively
 
-# method 3: imap_unordered
 for y in pool.imap_unordered(f, xs):
     print(y)           # may be in any order
 ####################################################################################################################################################################
 print("数据结构与算法1")
-def drop_first_last(grades)
-    first, *middle, last = grades
+def drop_first_last(grades):
+    first = grades
+    middle = grades
+    last = grades
+def avg(middle):
     return avg(middle)
 
 records = [
