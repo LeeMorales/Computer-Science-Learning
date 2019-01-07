@@ -546,8 +546,7 @@ print (pool.map(f, xs))  # prints [0, 1, 4, 9, 16]
 
 # method 2: imap
 for y in pool.imap(f, xs):
-    print y            # 0, 1, 4, 9, 16, respectively
-
+    print(y)           
 for y in pool.imap_unordered(f, xs):
     print(y)           # may be in any order
 ####################################################################################################################################################################
@@ -570,12 +569,12 @@ def do_bar(s):
     print('bar', s)
 for tag, *args in records:
     if tag == 'foo':
-        do foo(*args)
-elif tag == 'bar':
-       do_bar(*args)
+        do_foo(args)
+    elif tag == 'bar':
+       do_bar(args)
 
 items = [1, 10, 7, 4, 5, 9]
-head, *tail = items
+head, tail = items
 print(head),
 print('    ')
 print(tail)
