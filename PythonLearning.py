@@ -589,7 +589,7 @@ def search(lines, pattern , history = 5):
 ########################################################################################################################################################################
 print("数据结构与算法2")
 import heapq 
-nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+nums = int[1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
 print(heapq.nlargest(3, nums)
 print(heapq.nsmallest(3, nums)  #输出最小的三个元素
 
@@ -600,14 +600,14 @@ heapq.heapify(heap)
 print (heap)
 
 import heapq
-class priortyQueue
-   def_init_(self):
+class PriortyQueue:
+    def_init_(self):
       self.queue = []
       self._index = 0
 def push(self, item, priority):
-    heapq.heappush(self._queue, (-priority, self._index, item))
+    heapq.heappush(self._queue, (-pririty, self._index, item))
     self,_index += 1
-def pop(self):
+def pop(self)
     return heapq.heappop(self._queue)[-1]
 ################################################################################################################################
 print("数据结构与算法3")
@@ -709,3 +709,48 @@ def is_int(val)
 ivals = list(filter(is_int, values))
 print(ivals)
 ########################################################################################################################
+
+print("数据结构与算法6")
+prices = (
+  
+   ('ACME'): 45.23
+   ('AAPL'): 612.78
+   ('IBM'): 205.55
+   ('HPQ'): 37.20
+   ('FB'): 10.75
+
+
+)
+#创建一个价格大于200的字典
+p1 = { key:value for key, value in prices.items() if value > 200}
+#创建一个技术类的股票
+p2 = { key:value for key, value in prices.items() if key in tech_names}
+
+from collections import namedtuple
+Stock = namedtuple('Stock', ['name', 'shares', 'price'])
+def compute_cost(records):
+    total = 0.0
+    for rec in records:
+        s = Stock(*rec)
+        total += s.shares * s.price
+        return total
+
+from collections import namedtuple
+Stock = namedtuple('Stock', ['name', 'shares', 'price','date', 'time'])
+#创建原型元组
+stock_prototype = Stock(' ', 0, 0.0, None, None)
+#用来替换的函数
+def dict_to_stock(s):
+    return stock_prototype._replace(**s)
+
+nums = [1, 2, 3, 4, 5]
+s = sum(x * x for x in nums)
+#############################################################################################################################
+print("数据结构与算法7")
+from collection import ChainMap
+c = ChainMap(a,b)
+print(c['x'])  #输出a
+print(c['y'])  #输出b
+print(c['z'])  #输出a
+##############################################################################################################################
+print("第一章完成")
