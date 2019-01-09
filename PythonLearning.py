@@ -590,24 +590,24 @@ def search(lines, pattern , history = 5):
 print("数据结构与算法2")
 import heapq 
 nums = int[1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
-print(heapq.nlargest(3, nums)
-print(heapq.nsmallest(3, nums)  #输出最小的三个元素
+print(heapq.nlargest(3, nums))
+print(heapq.nsmallest(3, nums))
 
-nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37 2]
 import heapq
 heap = list(nums)
 heapq.heapify(heap)
 print (heap)
 
 import heapq
-class PriortyQueue:
-    def_init_(self):
+class priortyQueue:
+    def _init_(self):
       self.queue = []
       self._index = 0
 def push(self, item, priority):
     heapq.heappush(self._queue, (-pririty, self._index, item))
-    self,_index += 1
-def pop(self)
+    self_index += 1
+def pop(self):
     return heapq.heappop(self._queue)[-1]
 ################################################################################################################################
 print("数据结构与算法3")
@@ -632,7 +632,7 @@ print("数据结构与算法4")
 def dedupe(items):
     seen = set()
     for item in items:
-      if item not in seen
+      if item not in seen:
          yield item
          seen.add(item)
 
