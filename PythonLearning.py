@@ -672,15 +672,15 @@ class User:
             users = [User(23). User(3), User(99)]
             sorted(User, key = lambda u: u.user_id)
 rows = [
-    {'address': '1390 S Lee', 'date' , '01/07/2019'},
-    {'address': '1391 S Mark', 'date' , '01/06/2019'},
+    {'address': '1390 S Lee', 'date', '01/07/2019'},
+    {'address': '1391 S Mark', 'date', '01/06/2019'},
     {'address': '1392 S ranklin', 'date' , '01/05/2019'},
     {'address': '1393 S Kevin', 'date' , '01/04/2019'},
     {'address': '1394 S Marcus', 'date' , '01/03/2019'},
     {'address': '1395 S Sherlock', 'date' , '01/02/2019'},
     {'address': '1396 S Watson', 'date' , '01/01/2019'},
     {'address': '1397 S Jane', 'date' , '12/31/2018'},
-    {'address': '1398 S Miles Morales', 'date' , '12/30/2018'},
+    {'address': '1398 S Miles Morales', 'date' , '12/30/2018'}
 ]
 
 from operator import itemgetter
@@ -689,22 +689,22 @@ from collections import defaultdict
 rows_by_date = defaultdict(list)
 rows.sort(key=itemgetter('date'))
 for date, items in groupby(rows, key = itemgetter('date')):
-    print(date）
+    print(date)
     for i in items:
         print(' ', i)
         for row in rows:
             rows_by_date[row['date']].append(rows)
             valuse = ['1', '2', '-3', '-', '4', 'N/A', '5']
-def is_int(val)
+def is_int(value):
     try:
-       x = int(val)
+       x = int(value)
        return True
-    except ValueError：
+    except ValueError:
        return False
-ivals = list(filter(is_int, values))
-print(ivals)
+def value():
+    ivals = list(filter(is_int, value)) 
+    print(ivals)
 ########################################################################################################################
-
 print("数据结构与算法6")
 prices = (
   
