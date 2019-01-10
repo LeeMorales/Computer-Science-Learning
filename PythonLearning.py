@@ -567,11 +567,12 @@ def do_foo(x,y):
     print ('foo', x, y)
 def do_bar(s):
     print('bar', s)
-for tag, *args in records:
-    if tag == 'foo':
-        do_foo(args)
-    elif tag == 'bar':
-       do_bar(args)
+def args():
+    for tag, *args in records:
+        if tag == 'foo':
+            do_foo(args)
+        elif tag == 'bar':
+            do_bar(args)
 
 items = [1, 10, 7, 4, 5, 9]
 head, tail = items
@@ -619,7 +620,7 @@ e = {
     'a' : [1, 2, 3],
     'b' : [4, 5]
 }
-from collection improt OrderedDict
+from collections import OrderedDict
 d = OrderedDict()
 d['foo'] = 1
 d['bar'] = 2
@@ -646,7 +647,7 @@ def dedupe(items, key = None):
 
 SHARES = slice(20, 32)
 PRICE = slice(40, 48)
-cost = int(record[20:32]) * float(record[40:48])
+cost = int(records[20:32]) * float(records[40:48])
 
 def most_freqency():
     words = [
@@ -747,7 +748,7 @@ nums = [1, 2, 3, 4, 5]
 s = sum(x * x for x in nums)
 #############################################################################################################################
 print("数据结构与算法7")
-from collection import ChainMap
+from collections import ChainMap
 c = ChainMap(a,b)
 print(c['x'])  #输出a
 print(c['y'])  #输出b
