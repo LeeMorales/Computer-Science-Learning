@@ -281,7 +281,7 @@ print(head),
 print('    ')
 print(tail)
 
-from collections import deque:
+from collections import deque
 def search(lines, pattern , history = 5):
     previous_lines = deque(maxlen = history)
     for line in lines:
@@ -408,7 +408,7 @@ def value():
 ########################################################################################################################
 print("数据结构与算法6")
 prices = ("ACME:45.23", "AAPL: 612.78", "IBM: 205.55", "HPQ: 37.20", "FB: 10.75")
-
+def tech_names():
 #创建一个价格大于200的字典
 p1 = { key:value for key, value in prices.items() if value > 200}
 #创建一个技术类的股票
