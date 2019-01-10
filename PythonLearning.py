@@ -589,19 +589,16 @@ def search(lines, pattern , history = 5):
         previous_lines.append(line)
 ########################################################################################################################################################################
 print("数据结构与算法2")
-import heapq 
+from collections import deque
 nums = int[1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
 print(heapq.nlargest(3, nums))
 print(heapq.nsmallest(3, nums))
-
-nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37 2]
-import heapq
+nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
 heap = list(nums)
 heapq.heapify(heap)
 print (heap)
-
 import heapq
-class priortyQueue:
+class priorityqueue:
     def _init_(self):
       self.queue = []
       self._index = 0
@@ -627,7 +624,7 @@ d['bar'] = 2
 d['spam'] = 3
 d['grok'] = 4
 for key in d:
-print(key, d[key])
+    print(key, d[key])
 #####################################################################################################################################
 print("数据结构与算法4")
 def dedupe(items):
@@ -668,17 +665,16 @@ if __name__ == '__main__':
 #############################################################################################################################################
 print("数据结构与算法5")
 class User:
-       def_init_(self, user_id):
-      self.user_id = user_id
-   def_repr_(self):
-      return 'User({})'.format(self.user_id
-users = [User(23). User(3), User(99)]
-sorted(Users, key = lambda u: u.user_id)
-
+        def _init_(self, user_id):
+            self.user_id = user_id
+        def _repr_(self):
+            return 'User({})'.format(self.user_id)
+            users = [User(23). User(3), User(99)]
+            sorted(User, key = lambda u: u.user_id)
 rows = [
    {'address': '1390 S Lee', 'date', '01/07/2019'},
    {'address': '1391 S Mark', 'date', '01/06/2019'},
-   {'address': '1392 S Franklin', 'date', '01/05/2019'},
+   {'address': '1392 S ranklin', 'date', '01/05/2019'},
    {'address': '1393 S Kevin', 'date', '01/04/2019'},
    {'address': '1394 S Marcus', 'date', '01/03/2019'},
    {'address': '1395 S Sherlock', 'date', '01/02/2019'},
@@ -688,19 +684,16 @@ rows = [
 ]
 from operator import itemgetter
 from itertools import groupby
+from collections import defaultdict
+rows_by_date = defaultdict(list)
 rows.sort(key=itemgetter('date'))
 for date, items in groupby(rows, key = itemgetter('date')):
     print(date）
     for i in items:
         print(' ', i)
-
-from collections import defaultdict
-rows_by_date = defaultdict(list)
-for row in rows
-    rows_by_date[row['date']].append(row)
-
-
-valuse = ['1', '2', '-3', '-', '4', 'N/A', '5']
+        for row in rows:
+            rows_by_date[row['date']].append(rows)
+            valuse = ['1', '2', '-3', '-', '4', 'N/A', '5']
 def is_int(val)
     try:
        x = int(val)
