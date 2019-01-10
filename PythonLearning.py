@@ -605,8 +605,8 @@ class priortyQueue:
     def _init_(self):
       self.queue = []
       self._index = 0
-def push(self, item, priority):
-    heapq.heappush(self._queue, (-pririty, self._index, item))
+def push(self, item, priority, self_index):
+    heapq.heappush(self._queue, (-priority, self._index, item))
     self_index += 1
 def pop(self):
     return heapq.heappop(self._queue)[-1]
