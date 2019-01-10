@@ -82,7 +82,7 @@ print("多位运算符练习")
 a = 60           
 b = 13            
 c = 0
-c = a & b;        
+c = a & b        
 print ("1 - c 的值为：", c)
 c = a | b;        
 print ("2 - c 的值为：", c)
