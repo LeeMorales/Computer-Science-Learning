@@ -33,7 +33,7 @@ print("选择排序")
 def findSmallest(arr):
   # 存储最小值
   smallest = arr[0]
-  # 存储最小元素的索引
+  # 存储最小元素的索引  
   smallest_index = 0
   for i in range(1, len(arr)):
     if arr[i] < smallest:
