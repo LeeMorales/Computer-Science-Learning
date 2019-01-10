@@ -754,3 +754,30 @@ print(c['y'])  #输出b
 print(c['z'])  #输出a
 ##############################################################################################################################
 print("第一章完成")
+#################################################################################################################################################################################################################################################
+print("第二章开始")
+print("字符串和文本1")
+from urllib.request import urlopen
+
+def read_data(name):
+    if name.startswith(('http', 'https', 'ftp:')):
+        return urlopen(name) .read()
+    else:
+       with open(name) as f:
+            return f.read()
+##############################################################################################################################
+print("字符串和文本2没有程序，全是shell下完成")
+print("字符串与文本3")
+def matchcase(word):
+    def replace(m):
+        text = m.group()
+    def text():
+        if text.isupper():
+            return word.upper()
+        elif text.islower():
+            return word.lower()
+        elif text[0] .isupper():
+            return word.capitalize()
+        else:
+            return word
+        return replace  
