@@ -81,7 +81,7 @@ def quicksort(array):
               pivot = array[0]
               less = [i for i in array[1:] if i <= pivot]
               greater = [i for i in array[1:] if i > pivot]
-              return quicksort(less) + [pivot] + quicksort(greater)
+              return quicksort(less) + [pivot] + quicksort(greater) 
               print(quicksort([10, 5, 2, 3]))
 ####################################################################################################################################
 print("散列表")
@@ -217,7 +217,10 @@ class Node:
         print(self.data)
 root = Node(10)
 root.PrintTree()
-class Node:
+#############################################################################################################################################
+print("二叉树2")
+
+class Node:    
     def __init__(self, data):
         self.left = None
         self.right = None
@@ -278,7 +281,7 @@ print(head),
 print('    ')
 print(tail)
 
-from collections import deque
+from collections import deque:
 def search(lines, pattern , history = 5):
     previous_lines = deque(maxlen = history)
     for line in lines:
@@ -288,7 +291,7 @@ def search(lines, pattern , history = 5):
 ########################################################################################################################################################################
 print("数据结构与算法2")
 from collections import deque
-nums = int[1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
 print(heapq.nlargest(3, nums))
 print(heapq.nsmallest(3, nums))
 nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
