@@ -22,8 +22,8 @@ def args():
         elif tag == 'bar':
             do_bar(args)
 
-items = [1, 10, 7, 4, 5, 9]
-head, tail = items
+items = [1, 10, 7]
+head, middle, tail = items
 print(head),
 print('    ')
 print(tail)
@@ -38,6 +38,7 @@ def search(lines, pattern , history = 5):
 ########################################################################################################################################################################
 print("数据结构与算法2")
 from collections import deque
+heap = []
 nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
 print(heapq.nlargest(3, nums))
 print(heapq.nsmallest(3, nums))
