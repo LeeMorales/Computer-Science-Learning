@@ -300,7 +300,7 @@ heapq.heapify(heap)
 print (heap)
 import heapq
 class priorityqueue:
-    def _init_(self):；m
+    def _init_(self):
       self.queue = []
       self._index = 0
 def push(self, item, priority, self_index):
@@ -434,7 +434,7 @@ s = sum(x * x for x in nums)
 #############################################################################################################################
 print("数据结构与算法7")
 from collections import ChainMap
-c = ChainMap(a,b)
+c = ChainMap('a,b')
 print(c['x'])  #输出a
 print(c['y'])  #输出b
 print(c['z'])  #输出a
