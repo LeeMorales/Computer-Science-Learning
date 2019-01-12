@@ -75,14 +75,12 @@ for key in d:
     print(key, d[key])
 #####################################################################################################################################
 print("数据结构与算法4")
-def dedupe(items):
+def dedupe(items, key = None):
     seen = set()
     for item in items:
       if item not in seen:
          yield item
          seen.add(item)
-
-def dedupe(items, key = None):
     seen = set()
     for item in items:
         val = item if key is None else key(item)
