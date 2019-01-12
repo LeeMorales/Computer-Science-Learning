@@ -17,7 +17,6 @@
 #If the implementation is hard to explain, it's a bad idea.
 #If the implementation is easy to explain, it may be a good idea.
 #Namespaces are one honking great idea -- let's do more of those!
-"""
 print ('Hello world, I am Python')
 print (985*211)
 print (45678+0x12fd2)
@@ -239,9 +238,8 @@ while True:
         print (next(f), end=" ")
     except StopIteration:
         sys.exit()
-"""
-#########################################################################################################################################
 
+#########################################################################################################################################
 print("二分查找")
 # 定义binary_search,但我也不知道为什么要在这定义......
 def binary_search(list, item):  # low和high跟踪你将搜索的列表的哪个部分
@@ -712,11 +710,11 @@ def value():
 ########################################################################################################################
 print("数据结构与算法6")
 prices = ("ACME:45.23", "AAPL: 612.78", "IBM: 205.55", "HPQ: 37.20", "FB: 10.75")
-
+def tech_names():
 #创建一个价格大于200的字典
-p1 = { key:value for key, value in prices.items() if value > 200}
+    p1 = { key:value for key, value in prices.items() if value > 200}
 #创建一个技术类的股票
-p2 = { key:value for key, value in prices.items() if key in tech_names}
+    p2 = { key:value for key, value in prices.items() if key in tech_names}
 
 from collections import namedtuple
 Stock = namedtuple('Stock', ['name', 'shares', 'price'])
@@ -740,10 +738,12 @@ s = sum(x * x for x in nums)
 #############################################################################################################################
 print("数据结构与算法7")
 from collections import ChainMap
-c = ChainMap(a,b)
-print(c['x'])  #输出a
-print(c['y'])  #输出b
-print(c['z'])  #输出a
+def a():
+    def b():
+        c = ChainMap(a,b)
+        print(c['x'])  #输出a
+        print(c['y'])  #输出b
+        print(c['z'])  #输出a
 ##############################################################################################################################
 print("第一章完成")
 #################################################################################################################################################################################################################################################
