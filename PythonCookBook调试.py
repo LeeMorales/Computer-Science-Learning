@@ -161,9 +161,10 @@ def cb_filter():
     print()
 
     values = ['1', '2', '-3', '-', '4', 'N/A', '5']
-    def is_int(val):
+def is_int(val):
+    def values():
         try:
-            x = int(val)
+            x = (val)
             return True
         except ValueError:
             return False
