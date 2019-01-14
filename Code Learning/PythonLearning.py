@@ -592,7 +592,7 @@ def search(lines, pattern , history = 5):
 ########################################################################################################################################################################
 print("数据结构与算法2")
 from collections import deque
-nums = int[1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
 print(heapq.nlargest(3, nums))
 print(heapq.nsmallest(3, nums))
 nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
@@ -799,7 +799,7 @@ def var_str():
     a = Info('Guido', 37)
     print(s.format_map(vars(a)))
 
-    name = 'Lisi'
+    name = 'List'
     print(s.format_map(SafeSub(vars())))
 
     name = 'Guido'
