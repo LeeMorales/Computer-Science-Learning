@@ -345,7 +345,7 @@ if __name__ == '__main__':
 
 #############################################################################################################################
 print("数据结构与算法7")
-
+"""
 import os
 def trans_reduce():
     nums = [1, 2, 3, 4, 5]
@@ -373,10 +373,9 @@ def trans_reduce():
     min_shares = min(s['shares'] for s in portfolio)
     # Alternative: Returns {'name': 'AOL', 'shares': 20}
     min_shares = min(portfolio, key=lambda s: s['shares'])
-
 if __name__ == '__main__':
     trans_reduce()
-
+"""
 from collections import ChainMap
 
 
