@@ -237,8 +237,8 @@ def cb_filter():
     for x in pos:
         print(x, end=',')
     print()
-
     values = ['1', '2', '-3', '-', '4', 'N/A', '5']
+
 def is_int(val):
     def values():
         try:
@@ -345,14 +345,14 @@ if __name__ == '__main__':
 
 #############################################################################################################################
 print("数据结构与算法7")
-"""
+
 import os
 def trans_reduce():
     nums = [1, 2, 3, 4, 5]
     s = sum(x * x for x in nums)
     print(s)
 
-    files = os.listdir('D:\CodeHackProject\1.txt')
+    files = os.listdir('dirname')
     if any(name.endswith('.py') for name in files):
         print('There be python!')
     else:
@@ -376,7 +376,7 @@ def trans_reduce():
 
 if __name__ == '__main__':
     trans_reduce()
-"""
+
 from collections import ChainMap
 
 
