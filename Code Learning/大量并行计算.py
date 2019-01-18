@@ -2,6 +2,7 @@ import numpy
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+
 from ipyparallel import Client
 Writer = animation.writers['ffmpeg']
 writer = Writer(fps=15, metadata=dict(artist='saturnman'),bitrate=2400)
