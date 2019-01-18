@@ -273,7 +273,7 @@ def trans_reduce():
     s = sum(x * x for x in nums)
     print(s)
 
-    files = os.listdir('dirname')
+    files = os.listdir("D:\CodeHackProject\Code Learning")
     if any(name.endswith('.py') for name in files):
         print('There be python!')
     else:
