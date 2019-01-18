@@ -14,7 +14,7 @@ def dump_step(data, chunk_size):
                 div.write('   ')
             div.write(' --')
         else:
-            msg.write('   ')
+            msg.write('  ') 
             div.write('------')
         msg.write(' {:2d}'.format(item))
 
