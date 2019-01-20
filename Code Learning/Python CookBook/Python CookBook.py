@@ -1109,7 +1109,7 @@ def date_time():
 if __name__ == '__main__':
     date_time()
 ######################################################################
-print("s数字，日期和时间5")
+print("数字，日期和时间5")
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from dateutil.rrule import *
