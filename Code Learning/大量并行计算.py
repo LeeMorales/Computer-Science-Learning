@@ -12,10 +12,10 @@ fig = plt.figure()
 DPI = fig.get_dpi()
 fig.set_size_inches(2048.0/float(DPI),1280.0/float(DPI))
 
-ITERATIONS = 500
+ITERATIONS = 50
 #SIZE = lena.shape[0]
 #注意:此参数会极大影响计算过程的内存消耗，对于小内存机器可以会让计算进程因内存不够而出错，请自行调节计算
-SIZE = 2048
+SIZE = 1024
 MAX_COLOR = 255.
 
 x_min, x_max = -2.5, 1
@@ -49,8 +49,8 @@ fractal = numpy.zeros(z.shape,dtype=numpy.uint8)+MAX_COLOR
 
 def compute_frac(iter):
     import numpy
-    ITERATIONS = 500
-    SIZE = 512
+    ITERATIONS = 50
+    SIZE = 256
     MAX_COLOR = 255.
 
     x_min, x_max = -2.,2.
