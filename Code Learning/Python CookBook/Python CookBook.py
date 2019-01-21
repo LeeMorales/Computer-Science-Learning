@@ -1343,7 +1343,7 @@ class Node2:
 #添加子类
     def add_child(self, node):
         self._children.append(node)
-迭代子类
+#迭代子类
     def __iter__(self):
         return iter(self._children)
 #深度优先搜索产生其它元素
