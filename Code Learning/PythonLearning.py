@@ -17,6 +17,7 @@
 #If the implementation is hard to explain, it's a bad idea.
 #If the implementation is easy to explain, it may be a good idea.
 #Namespaces are one honking great idea -- let's do more of those!
+"""
 print ('Hello world, I am Python')
 print (985*211)
 print (45678+0x12fd2)
@@ -182,6 +183,7 @@ b = int(input("Please Input the B: "))
 while b < 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:
     print(b)
     a, b = b, a+b
+"""
 ##################################################################################################################################
 print("LeetCode的数组排序")
 class Solution:
@@ -217,28 +219,6 @@ if isinstance(myfloat, float) and myfloat == 10.0:
     print("Float: %f" % myfloat)
 if isinstance(myint, int) and myint == 20:
     print("Integer: %d" % myint)
-
-##########################################################################################################################################
-print("生成器")
- 
-import sys
- 
-def fibonacci(n): # 生成器函数 - 斐波那契
-    a, b, counter = 0, 1, 0
-    while True:
-        if (counter > n): 
-            return
-        yield a
-        a, b = b, a + b
-        counter += 1
-f = fibonacci(10) # f 是一个迭代器，由生成器返回生成
- 
-while True:
-    try:
-        print (next(f), end=" ")
-    except StopIteration:
-        sys.exit()
-
 #########################################################################################################################################
 print("二分查找")
 # 定义binary_search,但我也不知道为什么要在这定义......
@@ -449,7 +429,7 @@ while states_needed:
 print(final_stations)
 ##############################################################################################################################################
 print("二叉树")
-class Node:
+class node:
     def __init__(self, data):
         self.left = None
         self.right = None
@@ -482,7 +462,7 @@ class Node:
             print( self.data),
             if self.right:
                 self.right.PrintTree()
-    root = Node(12)
+    root = node(12)
     root.insert(6)
     root.insert(14)
     root.insert(3)
@@ -1658,7 +1638,6 @@ class Node2:
 #深度优先搜索产生其它元素
     def depth_first(self):
         return DepthFirstIterator(self)
-
 #深度优先搜索遍历所有节点
 class DepthFirstIterator(object):
     '''
