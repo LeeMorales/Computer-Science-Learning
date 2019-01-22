@@ -1224,6 +1224,7 @@ def tz_local():
 if __name__ == '__main__':
     tz_local()
 #####################################################################################################
+"""
 print("迭代器和生成器1")
 def manual_iter():
     with open('/CodeHackProject/1.txt') as f:
@@ -1297,6 +1298,7 @@ def gen_pattern():
 
 if __name__ == '__main__':
     gen_pattern()
+"""
 ##########################################################################################
 print("迭代器和生成器2")
 #建立树结构
@@ -1438,7 +1440,7 @@ class linehistory:
         self.history.clear()
 
 def gen_extrastate():
-    with open('somefile.txt') as f:
+    with open('1.txt') as f:
         lines = linehistory(f)
         for line in lines:
             if 'python' in line:
