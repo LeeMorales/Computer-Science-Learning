@@ -1448,3 +1448,70 @@ def gen_extrastate():
 if __name__ == '__main__':
     gen_extrastate()
 ################################################################################################
+print("迭代器和生成器3")
+print("迭代器和生成器3")
+import itertools
+
+
+def count(n):
+    while True:
+        yield n
+        n += 1
+
+
+def iter_slice():
+    c = count(0)
+    for x in itertools.islice(c, 10, 20):
+        print(x)
+
+
+if __name__ == '__main__':
+    iter_slice()
+
+from itertools import dropwhile
+from itertools import islice
+
+
+def skip_iter():
+    # with open('/etc/passwd') as f:
+    #     for line in dropwhile(lambda line: line.startswith('#'), f):
+    #         print(line, end='')
+
+    # 明确知道了要跳过的元素个数
+    items = ['a', 'b', 'c', 1, 4, 10, 15]
+    for x in islice(items, None, 3):
+        print(x)
+
+if __name__ == '__main__':
+    skip_iter()
+
+from itertools import permutations
+from itertools import combinations
+from itertools import combinations_with_replacement
+
+
+def iter_permutation():
+    """排列组合"""
+
+    items = ['a', 'b', 'c']
+
+    # 全排列
+    for p in permutations(items):
+        print(p)
+
+    # 指定长度
+    for p in permutations(items, 2):
+        print(p)
+
+    # 组合
+    for c in combinations(items, 3):
+        print(c)
+
+    # 可重复组合
+    for c in combinations_with_replacement(items, 3):
+        print(c)
+
+if __name__ == '__main__':
+    iter_permutation()
+###################################################################################################################
+
