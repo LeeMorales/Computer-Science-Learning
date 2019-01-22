@@ -1451,20 +1451,18 @@ if __name__ == '__main__':
     gen_extrastate()
 ################################################################################################
 print("迭代器和生成器3")
+"""
 import itertools
-
 
 def count(n):
     while True:
         yield n
         n += 1
 
-
 def iter_slice():
     c = count(0)
     for x in itertools.islice(c, 10, 20):
         print(x)
-
 
 if __name__ == '__main__':
     iter_slice()
@@ -1485,7 +1483,7 @@ def skip_iter():
 
 if __name__ == '__main__':
     skip_iter()
-
+"""
 from itertools import permutations
 from itertools import combinations
 from itertools import combinations_with_replacement
