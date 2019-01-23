@@ -1805,8 +1805,6 @@ print("生成器和迭代器4")
 from itertools import permutations
 from itertools import combinations
 from itertools import combinations_with_replacement
-
-
 def iter_permutation():
     """排列组合"""
 
