@@ -513,7 +513,7 @@ plt.title('FFT of Mixed wave)',fontsize=10,color='#F08080')
 
 
 plt.show()
-"""
+
 ##############################################################################################################################################
 print("并行，分布式算法")
 import multiprocessing
@@ -533,7 +533,8 @@ for y in pool.imap(f, xs):
     print(y)           
 for y in pool.imap_unordered(f, xs):
     print(y)           # may be in any order
-####################################################################################################################################################################
+"""
+###################################################################################################################################
 print("数据结构与算法1")
 def drop_first_last(grades):
     first = grades
@@ -558,8 +559,8 @@ def args():
         elif tag == 'bar':
             do_bar(args)
 
-items = [1, 10, 7, 4, 5, 9]
-head, tail = items
+items = [1, 10, 7]
+head, middle, tail = items
 print(head),
 print('    ')
 print(tail)
@@ -574,13 +575,15 @@ def search(lines, pattern , history = 5):
 ########################################################################################################################################################################
 print("数据结构与算法2")
 from collections import deque
-nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
-print(heapq.nlargest(3, nums))
-print(heapq.nsmallest(3, nums))
-nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
-heap = list(nums)
-heapq.heapify(heap)
-print (heap)
+def heapq():
+    nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+    print(heapq.nlargest(3, nums))
+    print(heapq.nsmallest(3, nums))
+    nums = [1,8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+    heap = list(nums)
+    heapq.heapify(heap)
+    print (heap)
+
 import heapq
 class priorityqueue:
     def _init_(self):
@@ -612,23 +615,58 @@ for key in d:
 #####################################################################################################################################
 print("数据结构与算法4")
 def dedupe(items):
+    """元素都是hashable"""
     seen = set()
     for item in items:
-      if item not in seen:
-         yield item
-         seen.add(item)
+        if item not in seen:
+            yield item
+            seen.add(item)
 
-def dedupe(items, key = None):
+
+def dedupe2(items, key=None):
+    """元素不是hashable的时候"""
     seen = set()
     for item in items:
         val = item if key is None else key(item)
         if val not in seen:
-           yield item
-           seen.add(val)
+            yield item
+            seen.add(val)
 
-SHARES = slice(20, 32)
-PRICE = slice(40, 48)
-cost = int(records[20:32]) * float(records[40:48])
+
+def remove_dup():
+    a = [1, 5, 2, 1, 9, 1, 5, 10]
+    print(list(dedupe(a)))
+
+    a = [{'x': 1, 'y': 2}, {'x': 1, 'y': 3}, {'x': 1, 'y': 2}, {'x': 2, 'y': 4}]
+    print(list(dedupe2(a, key=lambda d: (d['x'], d['y']))))
+    print(list(dedupe2(a, key=lambda d: d['x'])))
+
+
+if __name__ == '__main__':
+    remove_dup()
+
+def name_slice():
+    record = '....................100 .......513.25 ..........'
+    cost = int(record[20:23]) * float(record[31:37])
+
+    SHARES = slice(20, 23)
+    PRICE = slice(31, 37)
+    cost = int(record[SHARES]) * float(record[PRICE])
+    print(cost)
+    print(SHARES.start)
+    print(SHARES.stop)
+    print(SHARES.step)
+
+    a = slice(5, 50, 2)
+    s = 'HelloWorld'
+    print(a.indices(len(s)))
+    for i in range(*a.indices(len(s))):
+        print(s[i])
+
+
+if __name__ == '__main__':
+    name_slice()
+
 
 def most_freqency():
     words = [
@@ -649,73 +687,199 @@ if __name__ == '__main__':
 #############################################################################################################################################
 print("数据结构与算法5")
 class User:
-        def _init_(self, user_id):
-            self.user_id = user_id
-        def _repr_(self):
-            return 'User({})'.format(self.user_id)
-            users = [User(23). User(3), User(99)]
-            sorted(User, key = lambda u: u.user_id)
-rows = [
-    {"'address': '1390 S Lee', 'date', '01/07/2019'"},
-    {"'address': '1391 S Mark', 'date', '01/06/2019'"},
-    {"'address': '1392 S ranklin', 'date' , '01/05/2019'"},
-    {"'address': '1393 S Kevin', 'date' , '01/04/2019'"},
-    {"'address': '1394 S Marcus', 'date' , '01/03/2019'"},
-    {"'address': '1395 S Sherlock', 'date' , '01/02/2019'"},
-    {"'address': '1396 S Watson', 'date' , '01/01/2019'"},
-    {"'address': '1397 S Jane', 'date' , '12/31/2018'"},
-    {"'address': '1398 S Miles Morales', 'date' , '12/30/2018'"}
-]
+    def __init__(self, user_id):
+        self.user_id = user_id
+
+    def __repr__(self):
+        return 'User({})'.format(self.user_id)
+
+
+def sort_notcompare():
+    users = [User(23), User(3), User(99)]
+    print(users)
+    print(sorted(users, key=lambda u: u.user_id))
+
+    from operator import attrgetter
+    print(sorted(users, key=attrgetter('user_id')))
+
+    # print(sorted(users, key=attrgetter('last_name', 'first_name')))
+
+    print(min(users, key=attrgetter('user_id')))
+    print(max(users, key=attrgetter('user_id')))
+if __name__ == '__main__':
+    sort_notcompare()
+
+def sort_dictlist():
+    rows = [
+        {'fname': 'Brian', 'lname': 'Jones', 'uid': 1003},
+        {'fname': 'David', 'lname': 'Beazley', 'uid': 1002},
+        {'fname': 'John', 'lname': 'Cleese', 'uid': 1001},
+        {'fname': 'Big', 'lname': 'Jones', 'uid': 1004}
+    ]
+
+    from operator import itemgetter
+    rows_by_fname = sorted(rows, key=itemgetter('fname'))
+    rows_by_uid = sorted(rows, key=itemgetter('uid'))
+    print(rows_by_fname)
+    print(rows_by_uid)
+
+    rows_by_lfname = sorted(rows, key=itemgetter('lname','fname'))
+    print(rows_by_lfname)
+
+if __name__ == '__main__':
+    sort_dictlist()
 
 from operator import itemgetter
 from itertools import groupby
-from collections import defaultdict
-rows_by_date = defaultdict(list)
-rows.sort(key=itemgetter('date'))
-for date, items in groupby(rows, key = itemgetter('date')):
-    print(date)
-    for i in items:
-        print(' ', i)
-        for row in rows:
-            rows_by_date[row['date']].append(rows)
-            valuse = ['1', '2', '-3', '-', '4', 'N/A', '5']
-def is_int(value):
-    try:
-       x = int(value)
-       return True
-    except ValueError:
-       return False
-def value():
-    ivals = list(filter(is_int, value)) 
+
+
+def group_iter():
+    rows = [
+        {'address': '5412 N CLARK', 'date': '07/01/2012'},
+        {'address': '5148 N CLARK', 'date': '07/04/2012'},
+        {'address': '5800 E 58TH', 'date': '07/02/2012'},
+        {'address': '2122 N CLARK', 'date': '07/03/2012'},
+        {'address': '5645 N RAVENSWOOD', 'date': '07/02/2012'},
+        {'address': '1060 W ADDISON', 'date': '07/02/2012'},
+        {'address': '4801 N BROADWAY', 'date': '07/01/2012'},
+        {'address': '1039 W GRANVILLE', 'date': '07/04/2012'},
+    ]
+
+    # Sort by the desired field first
+    rows.sort(key=itemgetter('date'))
+    # Iterate in groups
+    for date, items in groupby(rows, key=itemgetter('date')):
+        print(date)
+        for i in items:
+            print(' ', i)
+
+    # defaultdict使用
+    from collections import defaultdict
+    rows_by_date = defaultdict(list)
+    for row in rows:
+        rows_by_date[row['date']].append(row)
+
+if __name__ == '__main__':
+    group_iter()
+from itertools import compress
+
+
+def cb_filter():
+    mylist = [1, 4, -5, 10, -7, 2, 3, -1]
+    print([n for n in mylist if n > 0])
+    print([n for n in mylist if n < 0])
+
+    pos = (n for n in mylist if n > 0)
+    print(pos)
+    for x in pos:
+        print(x, end=',')
+    print()
+    values = ['1', '2', '-3', '-', '4', 'N/A', '5']
+
+def is_int(val):
+    def values():
+        try:
+            x = (val)
+            return True
+        except ValueError:
+            return False
+    ivals = list(filter(is_int, values))
     print(ivals)
+    # Outputs ['1', '2', '-3', '4', '5']
+
+    # 条件过滤
+    clip_neg = [n if n > 0 else 0 for n in mylist]
+    print(clip_neg)
+
+    addresses = [
+        '5412 N CLARK',
+        '5148 N CLARK',
+        '5800 E 58TH',
+        '2122 N CLARK',
+        '5645 N RAVENSWOOD',
+        '1060 W ADDISON',
+        '4801 N BROADWAY',
+        '1039 W GRANVILLE',
+    ]
+    counts = [ 0, 3, 10, 4, 1, 7, 6, 1]
+    more5 = [n > 5 for n in counts]
+    print(list(compress(addresses, more5)))
+
+
+if __name__ == '__main__':
+    cb_filter()
 ########################################################################################################################
 print("数据结构与算法6")
-prices = ("ACME:45.23", "AAPL: 612.78", "IBM: 205.55", "HPQ: 37.20", "FB: 10.75")
-def tech_names():
-#创建一个价格大于200的字典
-    p1 = { key:value for key, value in prices.items() if value > 200}
-#创建一个技术类的股票
-    p2 = { key:value for key, value in prices.items() if key in tech_names}
+def sub_dict():
+    prices = {
+        'ACME': 45.23,
+        'AAPL': 612.78,
+        'IBM': 205.55,
+        'HPQ': 37.20,
+        'FB': 10.75
+    }
+    # Make a dictionary of all prices over 200
+    p1 = {key: value for key, value in prices.items() if value > 200}
+    # Make a dictionary of tech stocks
+    tech_names = {'AAPL', 'IBM', 'HPQ', 'MSFT'}
+    p2 = {key: value for key, value in prices.items() if key in tech_names}
 
+if __name__ == '__main__':
+    sub_dict()
 from collections import namedtuple
-Stock = namedtuple('Stock', ['name', 'shares', 'price'])
+
+
+def name_seq():
+    subscriber = namedtuple('Subscriber', ['addr', 'joined'])
+    sub = subscriber('jonesy@example.com', '2012-10-19')
+    print(sub)
+    print(sub.addr, sub.joined)
+
+    print(len(sub))
+    addr, joined = sub
+    print(addr, joined)
+
+
 def compute_cost(records):
     total = 0.0
     for rec in records:
-        s = Stock(*rec)
-        total += s.shares * s.price
-        return total
+        total += rec[1] * rec[2]
+    return total
 
-from collections import namedtuple
-Stock = namedtuple('Stock', ['name', 'shares', 'price','date', 'time'])
-#创建原型元组
-stock_prototype = Stock(' ', 0, 0.0, None, None)
-#用来替换的函数
+
+def compute_cost2(records):
+    Stock = namedtuple('SSS', ['name', 'shares', 'price'])
+    total = 0.0
+    for rec in records:
+        st = Stock(*rec)
+        total += st.shares * st.price
+    s = Stock('ACME', 100, 123.45)
+    # 更新命名元组
+    s = s._replace(shares=75)
+    print(s)
+    return total
+
+Stock1 = namedtuple('Stock', ['name', 'shares', 'price', 'date', 'time'])
+# Create a prototype instance
+stock_prototype = Stock1('', 0, 0.0, None, None)
+
+# Function to convert a dictionary to a Stock
 def dict_to_stock(s):
     return stock_prototype._replace(**s)
 
-nums = [1, 2, 3, 4, 5]
-s = sum(x * x for x in nums)
+def default_stock():
+    a = {'name': 'ACME', 'shares': 100, 'price': 123.45}
+    print(dict_to_stock(a))
+    b = {'name': 'ACME', 'shares': 100, 'price': 123.45, 'date': '12/17/2012'}
+    print(dict_to_stock(b))
+
+if __name__ == '__main__':
+    name_seq()
+    # rs = [('aa', 12, 33)]
+    rs = [['aa', 12, 33]]  # 元组和序列都可以
+    print(compute_cost2(rs))
+    default_stock()
+
 #############################################################################################################################
 print("数据结构与算法7")
 import os
@@ -745,10 +909,8 @@ def trans_reduce():
         min_shares = min(s['shares'] for s in portfolio)
         # Alternative: Returns {'name': 'AOL', 'shares': 20}
         min_shares = min(portfolio, key=lambda s: s['shares'])
-
     if __name__ == '__main__':
         trans_reduce()
-
     from collections import ChainMap
 
 
@@ -819,7 +981,7 @@ def matchcase(word):
             return word.capitalize()
         else:
             return word
-        return replace 
+        return replace
 #######################################################################################################################
 print("字符串与文本4")
 import sys
@@ -828,38 +990,27 @@ class Info:
     def __init__(self, name, n):
         self.name = name
         self.n = n
-
-
 class SafeSub(dict):
     """防止key找不到"""
     def __missing__(self, key):
         return '{' + key + '}'
-
-
 def sub(text):
     return text.format_map(SafeSub(sys._getframe(1).f_locals))
-
 def var_str():
     s = '{name} has {n} messages.'
     print(s.format(name='Guido', n=37))
-
     # vars()和format_map
     a = Info('Guido', 37)
     print(s.format_map(vars(a)))
-
-    name = 'List'
+    name = 'Lisi'
     print(s.format_map(SafeSub(vars())))
-
     name = 'Guido'
     n = 37
     print(sub('Hello {name}'))
     print(sub('You have {n} messages.'))
     print(sub('Your favorite color is {color}'))
-
-
 if __name__ == '__main__':
-    var_str()
-
+     var_str()
 ###################################################################################################################
 print("字符串与文本5")
 import textwrap
@@ -900,8 +1051,15 @@ from collections import namedtuple
 
 def tokenize_str():
     text = 'foo = 23 + 42 * 10'
-    tokens = [('NAME', 'foo'), ('EQ', '='), ('NUM', '23'), ('PLUS', '+'),
-              ('NUM', '42'), ('TIMES', '*'), ('NUM', '10')]
+    tokens = [
+        ('NAME', 'foo'), 
+        ('EQ', '='), 
+        ('NUM', '23'), 
+        ('PLUS', '+'),
+        ('NUM', '42'), 
+        ('TIMES', '*'), 
+        ('NUM', '10')
+]
     NAME = r'(?P<NAME>[a-zA-Z_][a-zA-Z_0-9]*)'
     NUM = r'(?P<NUM>\d+)'
     PLUS = r'(?P<PLUS>\+)'
@@ -965,8 +1123,9 @@ def generate_tokens(pat, text):
 
 
 if __name__ == '__main__':
-    tokenize_str()     
-############################################################################################################################
+    tokenize_str()
+#######################################################################################################################################
+print("字符串与文本6")
 import re
 import collections
 
@@ -1073,7 +1232,7 @@ def descent_parser():
     print(e.parse('2 + (3 + 4) * 5'))
     if __name__ == '__main__':
         descent_parser()
-##############################################################################################################################
+###########################################################################################################################
 print("字符串与文本7")
 import re
 
@@ -1355,6 +1514,93 @@ if __name__ == '__main__':
     array_numpy()
 #########################################################################################################################
 print("数字，日期和时间4")
+import numpy as np
+
+
+def array_numpy():
+    x = [1, 2, 3, 4]
+    y = [5, 6, 7, 8]
+    print(x * 2)
+    print(x + y)
+
+    # Numpy arrays
+    ax = np.array([1, 2, 3, 4])
+    ay = np.array([5, 6, 7, 8])
+    print(ax * 2)
+    print(ax + ay)
+    print(ax * ay)
+
+    print(f(ax))
+    print(np.sqrt(ax))
+    print(np.cos(ax))
+
+    # 大数组
+    grid = np.zeros(shape=(10000, 10000), dtype=float)
+    grid += 10
+    print(grid)
+    print(np.sin(grid))
+
+    # 二维数组的索引操作
+    a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+    print(a)
+    print(a[1])  # Select row 1
+    print(a[:, 1])  # Select column 1
+    # Select a subregion and change it
+    print(a[1:3, 1:3])
+    a[1:3, 1:3] += 10
+    print(a)
+
+    # Broadcast a row vector across an operation on all rows
+    print(a + [100, 101, 102, 103])
+    # Conditional assignment on an array
+    print(np.where(a < 10, a, 10))
+
+
+
+def f(x):
+    return 3 * x ** 2 - 2 * x + 7
+
+
+if __name__ == '__main__':
+    array_numpy()
+
+import numpy as np
+import numpy.linalg
+
+
+def matrix_linear():
+    m = np.matrix([[1,-2,3],[0,4,5],[7,8,-9]])
+    print(m)
+
+    # Return transpose  转置矩阵
+    print(m.T)
+
+    # Return inverse  # 逆矩阵
+    print(m.I)
+
+
+    # Create a vector and multiply
+    v = np.matrix([[2],[3],[4]])
+    print(v)
+    print(m * v)
+
+    # Determinant 行列式
+    print(numpy.linalg.det(m))
+
+    # Eigenvalues 特征值
+    print(numpy.linalg.eigvals(m))
+
+    # Solve for x in m*x = v
+    x = numpy.linalg.solve(m, v)
+    print(x)
+    print(m * x)
+    print(v)
+
+
+
+if __name__ == '__main__':
+    matrix_linear()
+
 from datetime import timedelta
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
@@ -1399,7 +1645,7 @@ def date_time():
 
 if __name__ == '__main__':
     date_time()
-#################################################################################
+######################################################################
 print("数字，日期和时间5")
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
@@ -1515,6 +1761,7 @@ def tz_local():
 if __name__ == '__main__':
     tz_local()
 #####################################################################################################
+"""
 print("迭代器和生成器1")
 def manual_iter():
     with open('/CodeHackProject/1.txt') as f:
@@ -1588,6 +1835,7 @@ def gen_pattern():
 
 if __name__ == '__main__':
     gen_pattern()
+"""
 ##########################################################################################
 print("迭代器和生成器2")
 #建立树结构
@@ -1640,6 +1888,7 @@ class Node2:
 #深度优先搜索产生其它元素
     def depth_first(self):
         return DepthFirstIterator(self)
+
 #深度优先搜索遍历所有节点
 class DepthFirstIterator(object):
     '''
@@ -1728,7 +1977,7 @@ class linehistory:
         self.history.clear()
 
 def gen_extrastate():
-    with open('somefile.txt') as f:
+    with open('1.txt') as f:
         lines = linehistory(f)
         for line in lines:
             if 'python' in line:
@@ -1739,20 +1988,18 @@ if __name__ == '__main__':
     gen_extrastate()
 ################################################################################################
 print("迭代器和生成器3")
+"""
 import itertools
-
 
 def count(n):
     while True:
         yield n
         n += 1
 
-
 def iter_slice():
     c = count(0)
     for x in itertools.islice(c, 10, 20):
         print(x)
-
 
 if __name__ == '__main__':
     iter_slice()
@@ -1773,7 +2020,7 @@ def skip_iter():
 
 if __name__ == '__main__':
     skip_iter()
-
+"""
 from itertools import permutations
 from itertools import combinations
 from itertools import combinations_with_replacement
@@ -1802,11 +2049,13 @@ def iter_permutation():
 
 if __name__ == '__main__':
     iter_permutation()
-####################################################################################################################
+###################################################################################################################
 print("生成器和迭代器4")
 from itertools import permutations
 from itertools import combinations
 from itertools import combinations_with_replacement
+
+
 def iter_permutation():
     """排列组合"""
 
@@ -1957,84 +2206,77 @@ def process_pipline():
     files = gen_opener(lognames)
     lines = gen_concatenate(files)
     pylines = gen_grep('(?i)python', lines)
-    for line in pylines:
-        print(line)
-
-    lognames = gen_find('access-log*', 'www')
-    files = gen_opener(lognames)
-    lines = gen_concatenate(files)
-    pylines = gen_grep('(?i)python', lines)
     bytecolumn = (line.rsplit(None, 1)[1] for line in pylines)
     bytes = (int(x) for x in bytecolumn if x != '-')
     print('Total', sum(bytes))
     if __name__ == '__main__':
         process_pipline()
 
-from collections import iterable
+    from collections import Iterable
 
 def flatten(items, ignore_types=(str, bytes)):
-    for x in items:
-        if isinstance(x, iterable) and not isinstance(x, ignore_types):
-            yield from flatten(x)
-        else:
-            yield x
+    def iterable():
+        for x in items:
+            if isinstance(x, iterable) and not isinstance(x, ignore_types):
+                yield from flatten(x)
+            else:
+                yield x
 
 
 def flatten_seq():
-    items = [1, 2, [3, 4, [5, 6], 7], 8]
-    # Produces 1 2 3 4 5 6 7 8
+    items = [1, 2, [3, 4, [5, 6], 7], 8]  
     for x in flatten(items):
         print(x)
     items = ['Dave', 'Paula', ['Thomas', 'Lewis']]
     for x in flatten(items):
         print(x)
 
-if __name__ == '__main__':
-    flatten_seq()
+    if __name__ == '__main__':
+        flatten_seq()
 
-import heapq
-
-
-def merge_sorted():
-    a = [1, 4, 7, 10]
-    b = [2, 5, 6, 11]
-    for c in heapq.merge(a, b):
-        print(c)
-
-    # 合并排序文件
-    with open('sorted_file_1', 'rt') as file1, \
-            open('sorted_file_2', 'rt') as file2, \
-            open('merged_file', 'wt') as outf:
-
-        for line in heapq.merge(file1, file2):
-            outf.write(line)
+    import heapq
 
 
-if __name__ == '__main__':
-    merge_sorted()
+    def merge_sorted():
+        a = [1, 4, 7, 10]
+        b = [2, 5, 6, 11]
+        for c in heapq.merge(a, b):
+            print(c)
 
-import sys
+        # 合并排序文件
+        with open('sorted_file_1', 'rt') as file1, \
+                open('sorted_file_2', 'rt') as file2, \
+                open('merged_file', 'wt') as outf:
 
-def process_data():
-    print(data)
-
-
-def reader(s, size):
-    while True:
-        data = s.recv(size)
-        if data == b'':
-            break
-            # process_data(data)
-def reader2(s, size):
-    for data in iter(lambda: s.recv(size), b''):
-        process_data(data)
-def iterate_while():
-    CHUNKSIZE = 8192
-    with open('/etc/passwd') as f:
-        for chunk in iter(lambda: f.read(10), ''):
-            n = sys.stdout.write(chunk)
+                for line in heapq.merge(file1, file2):
+                    outf.write(line)
 
 
-if __name__ == '__main__':
-    iterate_while()
+    if __name__ == '__main__':
+        merge_sorted()
+
+    import sys
+
+    def process_data():
+        print(data)
+
+
+    def reader(s, size):
+        while True:
+            data = s.recv(size)
+            if data == b'':
+                break
+                # process_data(data)
+    def reader2(s, size):
+        for data in iter(lambda: s.recv(size), b''):
+            process_data(data)
+    def iterate_while():
+        CHUNKSIZE = 8192
+        with open('/etc/passwd') as f:
+            for chunk in iter(lambda: f.read(10), ''):
+                n = sys.stdout.write(chunk)
+
+
+    if __name__ == '__main__':
+        iterate_while()
 ########################################################################################################################
