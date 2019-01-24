@@ -903,6 +903,7 @@ def trans_reduce():
             {'name':'AOL', 'shares': 20},
             {'name':'SCOX', 'shares': 65}
         ]
+        
         min_shares = min(s['shares'] for s in portfolio)
 
         # Original: Returns 20
