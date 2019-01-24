@@ -2034,11 +2034,11 @@ def iter_permutation():
     items = ['a', 'b', 'c']
 
     # 全排列
-    for p in iter_permutations(items):
+    for p in permutation(items):
         print(p)
 
     # 指定长度
-    for p in permutations(items, 2):
+    for p in permutation(items, 2):
         print(p)
 
     # 组合
