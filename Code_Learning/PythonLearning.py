@@ -2028,7 +2028,7 @@ def skip_iter():
     from itertools import combinations_with_replacement
 
 
-def iter_permutation():
+def permutation():
     """排列组合"""
 
     items = ['a', 'b', 'c']
@@ -2050,7 +2050,7 @@ def iter_permutation():
         print(c)
 
 if __name__ == '__main__':
-    iter_permutation()
+    permutation()
 ###################################################################################################################
 print("生成器和迭代器4")
 from itertools import permutations
