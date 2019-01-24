@@ -428,6 +428,7 @@ while states_needed:
 
 print(final_stations)
 ##############################################################################################################################################
+"""
 print("二叉树")
 class node:
     def __init__(self, data):
@@ -512,6 +513,7 @@ plt.title('FFT of Mixed wave)',fontsize=10,color='#F08080')
 
 
 plt.show()
+"""
 ##############################################################################################################################################
 print("并行，分布式算法")
 import multiprocessing
@@ -1968,11 +1970,11 @@ def process_pipline():
     if __name__ == '__main__':
         process_pipline()
 
-from collections import Iterable
+from collections import iterable
 
 def flatten(items, ignore_types=(str, bytes)):
     for x in items:
-        if isinstance(x, Iterable) and not isinstance(x, ignore_types):
+        if isinstance(x, iterable) and not isinstance(x, ignore_types):
             yield from flatten(x)
         else:
             yield x
