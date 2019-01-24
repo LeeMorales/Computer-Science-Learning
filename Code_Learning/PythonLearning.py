@@ -1958,17 +1958,15 @@ def process_pipline():
     for line in pylines:
         print(line)
 
-lognames = gen_find('access-log*', 'www')
+    lognames = gen_find('access-log*', 'www')
     files = gen_opener(lognames)
     lines = gen_concatenate(files)
     pylines = gen_grep('(?i)python', lines)
     bytecolumn = (line.rsplit(None, 1)[1] for line in pylines)
     bytes = (int(x) for x in bytecolumn if x != '-')
     print('Total', sum(bytes))
-
-
-if __name__ == '__main__':
-    process_pipline()
+    if __name__ == '__main__':
+        process_pipline()
 
 from collections import Iterable
 
