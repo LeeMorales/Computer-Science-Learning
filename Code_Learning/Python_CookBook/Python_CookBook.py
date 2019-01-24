@@ -1686,13 +1686,12 @@ def flatten(items, ignore_types=(str, bytes)):
                 yield x
 
 
-    def flatten_seq():
-        items = [1, 2, [3, 4, [5, 6], 7], 8]
-        # Produces 1 2 3 4 5 6 7 8
-        for x in flatten(items):
-            print(x)
-        items = ['Dave', 'Paula', ['Thomas', 'Lewis']]
-            for x in flatten(items):
+def flatten_seq():
+    items = [1, 2, [3, 4, [5, 6], 7], 8]  
+    for x in flatten(items):
+        print(x)
+    items = ['Dave', 'Paula', ['Thomas', 'Lewis']]
+    for x in flatten(items):
         print(x)
 
     if __name__ == '__main__':
@@ -1713,7 +1712,7 @@ def flatten(items, ignore_types=(str, bytes)):
                 open('merged_file', 'wt') as outf:
 
                 for line in heapq.merge(file1, file2):
-            outf.write(line)
+                    outf.write(line)
 
 
     if __name__ == '__main__':
