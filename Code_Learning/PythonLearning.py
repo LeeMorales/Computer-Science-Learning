@@ -2026,7 +2026,7 @@ def skip_iter():
     from itertools import permutations
     from itertools import combinations
     from itertools import combinations_with_replacement
-    
+
 
 def iter_permutation():
     """排列组合"""
@@ -2034,7 +2034,7 @@ def iter_permutation():
     items = ['a', 'b', 'c']
 
     # 全排列
-    for p in permutations(items):
+    for p in iter_permutations(items):
         print(p)
 
     # 指定长度
