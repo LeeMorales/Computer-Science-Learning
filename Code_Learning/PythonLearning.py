@@ -2007,7 +2007,7 @@ if __name__ == '__main__':
 
 from itertools import dropwhile
 from itertools import islice
-
+"""
 
 def skip_iter():
     # with open('/etc/passwd') as f:
@@ -2015,17 +2015,18 @@ def skip_iter():
     #         print(line, end='')
 
     # 明确知道了要跳过的元素个数
-    items = ['a', 'b', 'c', 1, 4, 10, 15]
-    for x in islice(items, None, 3):
-        print(x)
+    def islice():
+        items = ['a', 'b', 'c', 1, 4, 10, 15]
+        for x in islice(items, None, 3):
+                print(x)
 
-if __name__ == '__main__':
-    skip_iter()
-"""
-from itertools import permutations
-from itertools import combinations
-from itertools import combinations_with_replacement
+    if __name__ == '__main__':
+        skip_iter()
 
+    from itertools import permutations
+    from itertools import combinations
+    from itertools import combinations_with_replacement
+    
 
 def iter_permutation():
     """排列组合"""
