@@ -7,4 +7,6 @@ class Solution:
         :rtype: List[int]
         """
         list = [2, 7, 11, 15]
-    if 
+        while nums[0] + nums[1]:
+            print(0, 1)
+        
