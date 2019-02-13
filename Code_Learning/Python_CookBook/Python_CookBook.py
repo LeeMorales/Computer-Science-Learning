@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 print("数据结构与算法1")
 def drop_first_last(grades):
     first = grades
