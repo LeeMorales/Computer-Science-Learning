@@ -10,7 +10,8 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "intelliSenseMode": "msvc-x64"
+            "intelliSenseMode": "msvc-x64",
+            "configurationProvider": "go2sh.cmake-integration"
         }
     ],
     "version": 4

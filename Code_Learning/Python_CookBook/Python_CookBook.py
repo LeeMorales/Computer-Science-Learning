@@ -1782,4 +1782,52 @@ def print_sepend():
 if __name__ == '__main__':
     print_sepend()
 ############################################################################################################################
+print("文件和I/O 2")
+def rw_binary():
+    # Read the entire file as a single byte string
+    with open('somefile.bin', 'rb') as f:
+        data = f.read()
 
+    # Write binary data to a file
+    with open('somefile.bin', 'wb') as f:
+        f.write(b'Hello World')
+
+    # Text string
+    t = 'Hello World'
+    print(t[0])
+
+    # Byte string
+    b = b'Hello World'
+    print(b[0])
+    for c in b:
+        print(c)
+
+if __name__ == '__main__':
+    rw_binary()
+
+def write_noexist():
+    with open('D:/CodeHackProject/1.txt', 'wt') as f:
+        f.write('BBBBBBBBBBBB')
+    with open('D:/CodeHackProject/1.txt', 'xt') as f:
+        f.write('XXXXXXX')
+
+if __name__ == '__main__':
+    write_noexist()
+
+
+import io
+def string_io():
+    s = io.StringIO()
+    s.write('Hello World\n')
+    print('This is a test', file=s)
+    # Get all of the data written so far
+    print(s.getvalue())
+
+    # Wrap a file interface around an existing string
+    s = io.StringIO('Hello\nWorld\n')
+    print(s.read(4))
+    print(s.read())
+
+if __name__ == '__main__':
+    string_io()
+##########################################################################################################################
