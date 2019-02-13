@@ -1784,12 +1784,9 @@ if __name__ == '__main__':
 ############################################################################################################################
 print("文件和I/O 2")
 def rw_binary():
-    # Read the entire file as a single byte string
-    with open('somefile.bin', 'rb') as f:
+    with open('D:/CodeHackProject/1.bin', 'rb') as f:
         data = f.read()
-
-    # Write binary data to a file
-    with open('somefile.bin', 'wb') as f:
+    with open('D:/CodeHackProject/1.bin', 'wb') as f:
         f.write(b'Hello World')
 
     # Text string
@@ -1806,9 +1803,9 @@ if __name__ == '__main__':
     rw_binary()
 
 def write_noexist():
-    with open('D:/CodeHackProject/1.txt', 'wt') as f:
+    with open('D:/CodeHackProject/2.txt', 'wt') as f:
         f.write('BBBBBBBBBBBB')
-    with open('D:/CodeHackProject/1.txt', 'xt') as f:
+    with open('D:/CodeHackProject/2.txt', 'xt') as f:
         f.write('XXXXXXX')
 
 if __name__ == '__main__':
