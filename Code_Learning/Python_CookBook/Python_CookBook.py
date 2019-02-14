@@ -1830,3 +1830,67 @@ def string_io():
 if __name__ == '__main__':
     string_io()
 ##########################################################################################################################
+import gzip
+import bz2
+
+
+def gzip_bz2():
+    with gzip.open('somefile.gz', 'rt') as f:
+        text = f.read()
+    with bz2.open('somefile.bz2', 'rt') as f:
+        text = f.read()
+
+    with gzip.open('somefile.gz', 'wt') as f:
+        f.write(text)
+    with bz2.open('somefile.bz2', 'wt') as f:
+        f.write(text)
+    with gzip.open('somefile.gz', 'wt', compresslevel=5) as f:
+        f.write(text)
+
+    # 作用在已打开的二进制文件上
+    f = open('somefile.gz', 'rb')
+    with gzip.open(f, 'rt') as g:
+        text = g.read()
+
+if __name__ == '__main__':
+    gzip_bz2()
+
+from functools import partial
+
+
+def iterate_fixed():
+    RECORD_SIZE = 32
+
+    with open('somefile.data', 'rb') as f:
+        records = iter(partial(f.read, RECORD_SIZE), b'')
+        for r in records:
+            print(r)
+
+if __name__ == '__main__':
+    iterate_fixed()
+
+import os.path
+
+
+def read_into_buffer(filename):
+        buf = bytearray(os.path.getsize(filename))
+        with open(filename, 'rb') as f:
+            f.readinto(buf)
+        return buf
+
+
+def read_tobuffer():
+    buf = bytearray(os.path.getsize('filename'))
+    print(buf)
+    m1 = memoryview(buf)
+    m2 = m1[-5:]
+    print(m2)
+    m2[:] = b'WORLD'
+    print(buf)
+
+    bytearray(b'Hello World')
+
+
+if __name__ == '__main__':
+    read_tobuffer()
+##################################################################################################################################
