@@ -6,7 +6,7 @@ def manual_iter():
                 line = next(f)
                 print(line, end='')
         except StopIteration:
-            pass
+            print('Here is the End')
 
 def manual_iter2():
     with open('/etc/passwd') as f:
