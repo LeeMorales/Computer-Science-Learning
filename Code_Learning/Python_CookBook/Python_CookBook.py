@@ -1442,7 +1442,7 @@ class linehistory:
         self.history.clear()
 
 def gen_extrastate():
-    with open('1.txt') as f:
+    with open('D/CodeHackProject/Examples/1.txt') as f:
         lines = linehistory(f)
         for line in lines:
             if 'python' in line:
@@ -1762,7 +1762,7 @@ if __name__ == '__main__':
     rw_text()
 
 def print_tofile():
-    with open('d:/CodeHackProject/1.txt', 'wt') as f:
+    with open('D/CodeHackProject/Examples/1.txt', 'wt') as f:
         print('Hello World!', file=f)
 
 if __name__ == '__main__':
@@ -1786,9 +1786,9 @@ if __name__ == '__main__':
 ############################################################################################################################
 print("文件和I/O 2")
 def rw_binary():
-    with open('D:/CodeHackProject/1.bin', 'rb') as f:
+    with open('D/CodeHackProject/Examples/1.bin', 'rb') as f:
         data = f.read()
-    with open('D:/CodeHackProject/1.bin', 'wb') as f:
+    with open('D/CodeHackProject/Examples/1.bin', 'wb') as f:
         f.write(b'Hello World')
 
     # Text string
@@ -1803,16 +1803,16 @@ def rw_binary():
 
 if __name__ == '__main__':
     rw_binary()
-
+"""
 def write_noexist():
-    with open('D:/CodeHackProject/2.txt', 'wt') as f:
+    with open('D/CodeHackProject/Examples/2.txt', 'wt') as f:
         f.write('BBBBBBBBBBBB')
-    with open('D:/CodeHackProject/2.txt', 'xt') as f:
+    with open('D/CodeHackProject/Examples/2.txt', 'xt') as f:
         f.write('XXXXXXX')
 
 if __name__ == '__main__':
     write_noexist()
-
+"""
 
 import io
 def string_io():
@@ -1835,20 +1835,20 @@ import bz2
 
 
 def gzip_bz2():
-    with gzip.open('somefile.gz', 'rt') as f:
+    with gzip.open('D/CodeHackProject/Examples/1.gz', 'rt') as f:
         text = f.read()
-    with bz2.open('somefile.bz2', 'rt') as f:
+    with bz2.open('D/CodeHackProject/Examples/1.bz2', 'rt') as f:
         text = f.read()
 
-    with gzip.open('somefile.gz', 'wt') as f:
+    with gzip.open('D/CodeHackProject/Examples/1.gz', 'wt') as f:
         f.write(text)
-    with bz2.open('somefile.bz2', 'wt') as f:
+    with bz2.open('D/CodeHackProject/Examples/1.bz2', 'wt') as f:
         f.write(text)
-    with gzip.open('somefile.gz', 'wt', compresslevel=5) as f:
+    with gzip.open('D/CodeHackProject/Examples/1.gz', 'wt', compresslevel=5) as f:
         f.write(text)
 
     # 作用在已打开的二进制文件上
-    f = open('somefile.gz', 'rb')
+    f = open('D/CodeHackProject/Examples/1.gz', 'rb')
     with gzip.open(f, 'rt') as g:
         text = g.read()
 
@@ -1861,7 +1861,7 @@ from functools import partial
 def iterate_fixed():
     RECORD_SIZE = 32
 
-    with open('somefile.data', 'rb') as f:
+    with open('D/CodeHackProject/Examples/1.data', 'rb') as f:
         records = iter(partial(f.read, RECORD_SIZE), b'')
         for r in records:
             print(r)
@@ -1880,7 +1880,7 @@ def read_into_buffer(filename):
 
 
 def read_tobuffer():
-    buf = bytearray(os.path.getsize('filename'))
+    buf = bytearray(os.path.getsize('D/CodeHackProject/Examples/1.txt'))
     print(buf)
     m1 = memoryview(buf)
     m2 = m1[-5:]
