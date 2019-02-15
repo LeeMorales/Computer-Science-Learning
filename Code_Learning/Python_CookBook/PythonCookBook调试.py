@@ -95,11 +95,6 @@ from itertools import islice
 
 
 def skip_iter():
-    # with open('/etc/passwd') as f:
-    #     for line in dropwhile(lambda line: line.startswith('#'), f):
-    #         print(line, end='')
-
-    # 明确知道了要跳过的元素个数
     items = ['a', 'b', 'c', 1, 4, 10, 15]
     for x in islice(items, None, 3):
         print(x)
