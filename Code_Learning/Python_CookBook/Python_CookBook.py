@@ -1757,3 +1757,89 @@ def read_tobuffer():
 if __name__ == '__main__':
     read_tobuffer()
 ##################################################################################################################################
+print("文件和I/O 3")
+def print_sepend():
+    print('ACME', 50, 91.5)
+    print('ACME', 50, 91.5, sep=',')
+    print('ACME', 50, 91.5, sep=',', end='!!\n')
+    for i in range(5):
+        print(i)
+    for i in range(5):
+        print(i, end=' ')
+    print()
+
+    row = ['ACME', 50, 91.5]
+    print(*row, sep=',')
+
+if __name__ == '__main__':
+    print_sepend()
+################################################################################
+print("文件和I/O 4")
+def rw_binary():
+    # Read the entire file as a single byte string
+    with open('somefile.bin', 'rb') as f:
+        data = f.read()
+
+    # Write binary data to a file
+    with open('somefile.bin', 'wb') as f:
+        f.write(b'Hello World')
+
+    # Text string
+    t = 'Hello World'
+    print(t[0])
+
+    # Byte string
+    b = b'Hello World'
+    print(b[0])
+    for c in b:
+        print(c)
+
+if __name__ == '__main__':
+    rw_binary()
+################################################################################
+print("文件和I/O 5")
+import io
+
+
+def string_io():
+    s = io.StringIO()
+    s.write('Hello World\n')
+    print('This is a test', file=s)
+    # Get all of the data written so far
+    print(s.getvalue())
+
+    # Wrap a file interface around an existing string
+    s = io.StringIO('Hello\nWorld\n')
+    print(s.read(4))
+    print(s.read())
+
+if __name__ == '__main__':
+    string_io()
+################################################################################
+print("文件与I/O 6")
+import gzip
+import bz2
+
+
+def gzip_bz2():
+    with gzip.open('somefile.gz', 'rt') as f:
+        text = f.read()
+    with bz2.open('somefile.bz2', 'rt') as f:
+        text = f.read()
+
+    with gzip.open('somefile.gz', 'wt') as f:
+        f.write(text)
+    with bz2.open('somefile.bz2', 'wt') as f:
+        f.write(text)
+    with gzip.open('somefile.gz', 'wt', compresslevel=5) as f:
+        f.write(text)
+
+    # 作用在已打开的二进制文件上
+    f = open('somefile.gz', 'rb')
+    with gzip.open(f, 'rt') as g:
+        text = g.read()
+
+if __name__ == '__main__':
+    gzip_bz2()
+################################################################################
+print("文件与I/O 7")
