@@ -1758,88 +1758,372 @@ if __name__ == '__main__':
     read_tobuffer()
 ##################################################################################################################################
 print("文件和I/O 3")
-def print_sepend():
-    print('ACME', 50, 91.5)
-    print('ACME', 50, 91.5, sep=',')
-    print('ACME', 50, 91.5, sep=',', end='!!\n')
-    for i in range(5):
-        print(i)
-    for i in range(5):
-        print(i, end=' ')
-    print()
+import gzip
+with gzip.open('1.gz', 'rt') as f:
+    text = f.read()
+import bz2
+with bz2.open('1.bz2', 'rt') as f:
+    text = f.read()
+#使用gzip压缩
+import gzip
+with gzip.open('1.gz;, 'wt')m as f:
+    f.write(text)
 
-    row = ['ACME', 50, 91.5]
-    print(*row, sep=',')
+#使用bz2压缩
+import bz2
+with bz2.open('1.bz2', 'wt') as f:
+    f.write(text)
+from functools import partial
+
+
+def iterate_fixed():
+    RECORD_SIZE = 32
+
+    with open('somefile.data', 'rb') as f:
+        records = iter(partial(f.read, RECORD_SIZE), b'')
+        for r in records:
+            print(r)
 
 if __name__ == '__main__':
-    print_sepend()
+    iterate_fixed()
+import os.path
+
+
+def read_into_buffer(filename):
+        buf = bytearray(os.path.getsize(filename))
+        with open(filename, 'rb') as f:
+            f.readinto(buf)
+        return buf
+
+
+def read_tobuffer():
+    buf = bytearray(os.path.getsize('filename'))
+    print(buf)
+    m1 = memoryview(buf)
+    m2 = m1[-5:]
+    print(m2)
+    m2[:] = b'WORLD'
+    print(buf)
+
+    bytearray(b'Hello World')
+
+
+if __name__ == '__main__':
+    read_tobuffer()
 ################################################################################
 print("文件和I/O 4")
-def rw_binary():
-    # Read the entire file as a single byte string
-    with open('somefile.bin', 'rb') as f:
-        data = f.read()
+import os
+import mmap
 
-    # Write binary data to a file
-    with open('somefile.bin', 'wb') as f:
-        f.write(b'Hello World')
+def memory_map(filename, access=mmap.ACCESS_WRITE):
+    size = os.path.getsize(filename)
+    fd = os.open(filename, os.O_RDWR)
+    return mmap.mmap(fd, size, access=access)
+import os
 
-    # Text string
-    t = 'Hello World'
-    print(t[0])
 
-    # Byte string
-    b = b'Hello World'
-    print(b[0])
-    for c in b:
-        print(c)
+def path_names():
+    path = '/Users/beazley/Data/data.csv'
+    print(os.path.basename(path))
+    print(os.path.dirname(path))
+    print(os.path.join('tmp', 'data', os.path.basename(path)))
+
+    path = '~/Data/data.csv'
+    print(os.path.expanduser(path))
+    print(os.path.splitext(path))
 
 if __name__ == '__main__':
-    rw_binary()
+    path_names()
 ################################################################################
 print("文件和I/O 5")
-import io
-
-
-def string_io():
-    s = io.StringIO()
-    s.write('Hello World\n')
-    print('This is a test', file=s)
-    # Get all of the data written so far
-    print(s.getvalue())
-
-    # Wrap a file interface around an existing string
-    s = io.StringIO('Hello\nWorld\n')
-    print(s.read(4))
-    print(s.read())
-
-if __name__ == '__main__':
-    string_io()
-################################################################################
+import os	
+import os.path
+import glob
+from fnmatch import fnmatch
+import sys
+def dir_listfile():
+    names = os.listdir('somedir')
+    # Get all regular files
+    names = [name for name in os.listdir('somedir')
+    if os.path.isfile(os.path.join('somedir', name))]
+    dirnames = [name for name in os.listdir('somedir')
+    if os.path.isdir(os.path.join('somedir', name))]
+    pyfiles = [name for name in os.listdir('somedir')
+    if name.endswith('.py')]
+    pyfiles = glob.glob('somedir/*.py')
+    pyfiles = [name for name in os.listdir('somedir')
+    if fnmatch(name, '*.py')]
+    pyfiles = glob.glob('*.py')
+    # Get file sizes and modification dates
+    name_sz_date = [(name, os.path.getsize(name), os.path.getmtime(name))
+    for name in pyfiles]
+    for name, size, mtime in name_sz_date:
+        print(name, size, mtime)
+    # Alternative: Get file metadata
+        file_metadata = [(name, os.stat(name)) for name in pyfiles]
+    for name, meta in file_metadata:
+        print(name, meta.st_size, meta.st_mtime)
+    if __name__ == '__main__':
+        dir_listfile()
+	def bypass_encoding():
+	    print(sys.getfilesystemencoding())
+	if __name__ == '__main__':
+	    bypass_encoding()
+    
+########################################################################
 print("文件与I/O 6")
-import gzip
-import bz2
+def bad_filename():
+    return repr(filename)[1:-1]
+try:
+    print(filename)
+except UnicodeEncodeError:
+    print(bad_filename(filename))
+import urllib.request
+import io
+import sys
+def change_open_encode():
+    u = urllib.request.urlopen('http://www.python.org')
+    f = io.TextIOWrapper(u, encoding='utf-8')
+    text = f.read()
+print(sys.stdout.encoding)
 
-
-def gzip_bz2():
-    with gzip.open('somefile.gz', 'rt') as f:
-        text = f.read()
-    with bz2.open('somefile.bz2', 'rt') as f:
-        text = f.read()
-
-    with gzip.open('somefile.gz', 'wt') as f:
-        f.write(text)
-    with bz2.open('somefile.bz2', 'wt') as f:
-        f.write(text)
-    with gzip.open('somefile.gz', 'wt', compresslevel=5) as f:
-        f.write(text)
-
-    # 作用在已打开的二进制文件上
-    f = open('somefile.gz', 'rb')
-    with gzip.open(f, 'rt') as g:
-        text = g.read()
-
+    sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='latin-1')
+    print(sys.stdout.encoding)
+f = open('sample.txt','w')
+    print(f)
+    print(f.buffer)
+    print(f.buffer.raw)
 if __name__ == '__main__':
-    gzip_bz2()
+    change_open_encode()
+import sys
+def bytes_tofile():
+    sys.stdout.buffer.write(b'Hello\n')
+if __name__ == '__main__':
+    bytes_tofile()
 ################################################################################
 print("文件与I/O 7")
+import os
+import sys
+from socket import socket, AF_INET, SOCK_STREAM
+def file_descriptor():
+    fd = os.open('somefile.txt', os.O_WRONLY | os.O_CREAT)
+# Turn into a proper file
+    f = open(fd, 'wt')
+    f.write('hello world\n')
+    f.close()
+ # Create a binary-mode file for stdout
+    bstdout = open(sys.stdout.fileno(), 'wb', closefd=False)
+    bstdout.write(b'Hello World\n')
+    bstdout.flush()
+def echo_client(client_sock, addr):
+    print('Got connection from', addr)
+# Make text-mode file wrappers for socket reading/writing
+    client_in = open(client_sock.fileno(), 'rt', encoding='latin-1',
+                     closefd=False)
+client_out = open(client_sock.fileno(), 'wt', encoding='latin-1',
+                      closefd=False)
+# Echo lines back to the client using file I/O
+    for line in client_in:
+        client_out.write(line)
+        client_out.flush()
+client_sock.close()
+def echo_server(address):
+    sock = socket(AF_INET, SOCK_STREAM)
+    sock.bind(address)
+    sock.listen(1)
+    while True:
+        client, addr = sock.accept()
+        echo_client(client, addr)
+if __name__ == '__main__':
+    file_descriptor()
+tempfile.Temporaryfile:
+from tempfile import TemporaryFile
+from tempfile import TemporaryDirectory
+from tempfile import NamedTemporaryFile
+import tempfile
+def temp_file():
+    with TemporaryFile('w+t') as f:
+        # Read/write to the file
+        f.write('Hello World\n')
+        f.write('Testing\n')
+# Seek back to beginning and read the data
+        f.seek(0)
+        data = f.read()
+        print(data)
+ with NamedTemporaryFile('w+t') as f:
+        print('filename is:', f.name)
+#创建一个临时目录
+    with TemporaryDirectory() as dirname:
+        print('dirname is:', dirname)
+print(tempfile.mkstemp())
+    print(tempfile.mkdtemp())
+    print(tempfile.gettempdir())
+if __name__ == '__main__':
+    temp_file()
+import serial
+def serial_posts():
+    ser = serial.Serial('/dev/tty.usbmodem641',  # Device name varies
+                        baudrate=9600,
+                        bytesize=8,
+                        parity='N',
+                        stopbits=1)
+if __name__ == '__main__':
+    serial_posts()
+############################################################################
+print("文件与I/O 8")
+import pickle
+def serailize_object():
+    data = [1, 2, 3]
+    f = open('somefile', 'wb')
+    pickle.dump(data, f)
+s = pickle.dumps(data)
+# Restore from a file
+    f = open('somefile', 'rb')
+    data = pickle.load(f)
+# Restore from a string
+    data = pickle.loads(s)
+f = open('somedata', 'wb')
+    pickle.dump([1, 2, 3, 4], f)
+    pickle.dump('hello', f)
+    pickle.dump({'Apple', 'Pear', 'Banana'}, f)
+    f.close()
+f = open('somedata', 'rb')
+    print(pickle.load(f))
+    print(pickle.load(f))
+    print(pickle.load(f))
+if __name__ == '__main__':
+    serailize_object()
+# countdown.py
+import time
+import threading
+class Countdown:
+    def __init__(self, n):
+        self.n = n
+        self.thr = threading.Thread(target=self.run)
+        self.thr.daemon = True
+        self.thr.start()
+def run(self):
+        while self.n > 0:
+            print('T-minus', self.n)
+            self.n -= 1
+            time.sleep(5)
+def __getstate__(self):
+        return self.n
+def __setstate__(self, n):
+        self.__init__(n)
+##########################################################################
+print("数据编码与处理")
+import csv
+from collections import namedtuple
+
+
+def rw_csv():
+    with open('stocks.csv') as f:
+        f_csv = csv.reader(f)
+        headers = next(f_csv)
+        for row in f_csv:
+            print(row)
+
+    with open('stocks.csv') as f:
+        f_csv = csv.reader(f)
+        headings = next(f_csv)
+        Row = namedtuple('Row', headings)
+        for r in f_csv:
+            row = Row(*r)
+            # Process row
+            print(row.Change)
+
+    headers = ['Symbol', 'Price', 'Date', 'Time', 'Change', 'Volume']
+    rows = [('AA', 39.48, '6/11/2007', '9:36am', -0.18, 181800),
+            ('AIG', 71.38, '6/11/2007', '9:36am', -0.15, 195500),
+            ('AXP', 62.58, '6/11/2007', '9:36am', -0.46, 935000),
+    ]
+
+    with open('stocks.csv', 'w') as f:
+        f_csv = csv.writer(f)
+        f_csv.writerow(headers)
+        f_csv.writerows(rows)
+
+
+if __name__ == '__main__':
+    rw_csv()
+
+import json
+from collections import OrderedDict
+
+
+class JSONObject:
+    def __init__(self, d):
+        self.__dict__ = d
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+def serialize_instance(obj):
+    d = {'__classname__': type(obj).__name__}
+    d.update(vars(obj))
+    return d
+
+
+def unserialize_object(d):
+    clsname = d.pop('__classname__', None)
+    if clsname:
+        cls = classes[clsname]
+        obj = cls.__new__(cls)  # Make instance without calling __init__
+        for key, value in d.items():
+            setattr(obj, key, value)
+            return obj
+    else:
+        return d
+
+# Dictionary mapping names to known classes
+classes = {
+    'Point': Point
+}
+
+
+def rw_json():
+    data = {
+        'name': 'ACME',
+        'shares': 100,
+        'price': 542.23
+    }
+
+    json_str = json.dumps(data)  # str类型
+    data = json.loads(json_str)
+
+    # Writing JSON data
+    with open('data.json', 'w') as f:
+        json.dump(data, f)
+
+    # Reading data back
+    with open('data.json', 'r') as f:
+        data = json.load(f)
+
+    # 使用object_pairs_hook
+    s = '{"name": "ACME", "shares": 50, "price": 490.1}'
+    data = json.loads(s, object_pairs_hook=OrderedDict)
+    print(data)
+
+    # 解码为自定义对象
+    # data = json.loads(s, object_hook=JSONObject)
+    # print(data.name)
+    # print(data.shares)
+
+    print(json.dumps(data))
+    print(json.dumps(data, indent=4))
+
+    p = Point(2, 3)
+    s = json.dumps(p, default=serialize_instance)
+    print(s)
+    a = json.loads(s, object_hook=unserialize_object)
+    print(a)
+
+
+if __name__ == '__main__':
+    rw_json()
+################################################################################
