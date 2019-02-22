@@ -1767,7 +1767,7 @@ with bz2.open('1.bz2', 'rt') as f:
 #使用gzip压缩
 import gzip
 with gzip.open('1.gz;, 'wt')m as f:
-    f.write(text)
+        f.write(text)
 
 #使用bz2压缩
 import bz2
