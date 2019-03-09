@@ -1,9 +1,9 @@
 def spam(a, b=42):
     print(a, b)
 
-spam(1) # Ok. a=1, b=42
-spam(1, 2) # Ok. a=1, b=2
-def spam(a, b=None):
+    spam(1) # Ok. a=1, b=42
+    spam(1, 2) # Ok. a=1, b=2
+    ·def spam(a, b=None):
     if b is None:
         b = []
         _no_value = object()
