@@ -4,6 +4,26 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
             "version": "0.2.0",
             "configurations": [
+                
+                {
+                    "type": "node",
+                    "request": "launch",
+                    "name": "Launch Program",
+                    "program": "${workspaceFolder}/app.js"
+                },
+                {
+                    "type": "java",
+                    "name": "Debug (Launch)",
+                    "request": "launch",
+                    "mainClass": ""
+                },
+                {
+                    "name": "Python: Terminal (integrated)",
+                    "type": "python",
+                    "request": "launch",
+                    "program": "${file}",
+                    "console": "integratedTerminal"
+                },
                 {
                     "name": "(gdb) Launch",
                     "preLaunchTask": "build",
