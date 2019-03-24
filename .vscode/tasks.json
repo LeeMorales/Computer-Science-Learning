@@ -1,70 +1,29 @@
 {
   "version": "2.0.0",
   "tasks": [
-    {
-      "label": "build",
-      "type": "process",
-      "command": "g++",
-      "args": [
-        "-g",
-        "-Wall",
-        "-std=c++14",
-        "-lm",
-        "${file}",
-        "-o",
-        "${fileDirname}/${fileBasenameNoExtension}.o"
-      ],
-      "presentation": {
-        "echo": false,
-        "reveal": "silent",
-        "showReuseMessage": false
-      },
-      "problemMatcher": "$gcc",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "windows": {
-        "args": [
-          "-g",
-          "-Wall",
-          "-std=c++14",
-          "-lm",
-          "${file}",
-          "-o",
-          "${fileDirname}/${fileBasenameNoExtension}.exe"
-        ]
+      {
+          "label": "build",
+          "type": "shell",
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "presentation": {
+              "echo": true,
+              "reveal": "always",
+              "focus": false,
+              "panel": "shared"
+          },
+          "windows": {
+              "command": "g++",
+              "args": [
+                  "-ggdb",
+                  "\"${file}\"",
+                  "--std=c++11",
+                  "-o",
+                  "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+              ]
+          }
       }
-    },
-    {
-      "label": "run",
-      "type": "shell",
-      "dependsOn": "build",
-      "command": "${fileDirname}/${fileBasenameNoExtension}.o",
-      "presentation": {
-        "focus": true
-      },
-      "group": {
-        "kind": "test",
-        "isDefault": true
-      },
-      "windows": {
-        "command": "${fileDirname}/${fileBasenameNoExtension}.exe"
-      }
-    },
-    {
-      "type": "shell",
-      "label": "g++.exe build active file",
-      "command": "C:\\Program Files\\MiniGW\\mingw64\\bin\\g++.exe",
-      "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe"
-      ],
-      "options": {
-        "cwd": "C:\\Program Files\\MiniGW\\mingw64\\bin"
-      }
-    }
   ]
 }
