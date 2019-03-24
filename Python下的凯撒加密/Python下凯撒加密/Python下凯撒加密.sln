@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28714.193
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python下凯撒加密", "Python下凯撒加密.pyproj", "{FFFF3FB0-543C-4DCB-BD76-F8AE1E59E47E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFFF3FB0-543C-4DCB-BD76-F8AE1E59E47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFFF3FB0-543C-4DCB-BD76-F8AE1E59E47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88E41830-FCC5-4A40-A81D-67863CBBAEEC}
+	EndGlobalSection
+EndGlobal
