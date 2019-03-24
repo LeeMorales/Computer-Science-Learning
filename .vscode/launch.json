@@ -8,10 +8,10 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.o",
+            "program": "$D:/CodeHackProject/C++/C++/${fileBasenameNoExtension}.o",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "$D:/CodeHackProject/C++/C++/",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -24,7 +24,7 @@
             ],
             "preLaunchTask": "build",
             "windows": {
-                "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "program": "$D:/CodeHackProject/C++/C++/$源.exe",
                 "miDebuggerPath": "/path/to/gdb",
             },
             "osx": {
