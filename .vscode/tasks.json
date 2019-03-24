@@ -51,6 +51,20 @@
       "windows": {
         "command": "${fileDirname}/${fileBasenameNoExtension}.exe"
       }
+    },
+    {
+      "type": "shell",
+      "label": "g++.exe build active file",
+      "command": "C:\\Program Files\\MiniGW\\mingw64\\bin\\g++.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\Program Files\\MiniGW\\mingw64\\bin"
+      }
     }
   ]
 }
