@@ -1,29 +1,57 @@
 {
   "version": "2.0.0",
   "tasks": [
-      {
-          "label": "build",
-          "type": "shell",
-          "group": {
-              "kind": "build",
-              "isDefault": true
-          },
-          "presentation": {
-              "echo": true,
-              "reveal": "always",
-              "focus": false,
-              "panel": "shared"
-          },
-          "windows": {
-              "command": "g++",
-              "args": [
-                  "-ggdb",
-                  "\"${file}\"",
-                  "--std=c++11",
-                  "-o",
-                  "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
-              ]
-          }
+    {
+      "label": "build",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "windows": {
+        "command": "g++",
+        "args": [
+          "-ggdb",
+          "\"${file}\"",
+          "--std=c++11",
+          "-o",
+          "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+        ]
       }
+    },
+    {
+      "type": "shell",
+      "label": "g++.exe build active file",
+      "command": "C:\\Program Files\\MiniGW\\mingw64\\bin\\g++.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\Program Files\\MiniGW\\mingw64\\bin"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "cpp.exe build active file",
+      "command": "C:\\Program Files\\MiniGW\\mingw64\\bin\\cpp.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\Program Files\\MiniGW\\mingw64\\bin"
+      }
+    }
   ]
 }
