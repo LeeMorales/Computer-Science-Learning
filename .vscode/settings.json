@@ -1,11 +1,11 @@
 {
-    "git.ignoreLimitWarning": true,
-    "python.linting.pylintEnabled": true,
-    "python.unitTest.pyTestArgs": [
-        "."
-    ],
-    "python.unitTest.unittestEnabled": false,
-    "python.unitTest.nosetestsEnabled": false,
-    "python.unitTest.pyTestEnabled": false,
-    "python.unitTest.promptToConfigure": false
+    "files.exclude": {
+        "**/*.o": true,
+        "**/*.exe": true,
+        "**/*.class": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
 }
