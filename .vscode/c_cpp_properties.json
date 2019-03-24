@@ -5,13 +5,13 @@
             "intelliSenseMode": "msvc-x64",
             "includePath": [
                 "${workspaceFolder}",
-                "C:\Program Files\MiniGW\mingw64\include",
-                "C:\Program Files\MiniGW\mingw64\opt\include",
-                "C:\Program Files\MiniGW\mingw64\opt\lib\libffi-3.2.1\include",
-                "C:\Program Files\MiniGW\mingw64\x86_64-w64-mingw32\include",
-                "C:\Program Files\MiniGW\mingw64\lib\gcc\x86_64-w64-mingw32\7.3.0\include",
-                "C:\Program Files\MiniGW\mingw64\lib\gcc\x86_64-w64-mingw32\7.3.0\include-fixed",
-                "C:\Program Files\MiniGW\mingw64\lib\gcc\x86_64-w64-mingw32\7.3.0\install-tools\include"
+                "C:/Program Files/MiniGW/mingw64/include",
+                "C:/Program Files/MiniGW/mingw64/opt/include",
+                "C:/Program Files/MiniGW/mingw64/op/lib/libffi-3.2.1/include",
+                "C:/Program Files/MiniGW/mingw64/x86_64-w64-mingw32/include",
+                "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include",
+                "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed",
+                "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/install-tools/include"
             ],
             "defines": [
                 "_DEBUG",
@@ -22,13 +22,13 @@
             "browse": {
                 "path": [
                     "${workspaceFolder}",
-                    "C:\Program Files\MiniGW\mingw64\include",
-                    "C:\Program Files\MiniGW\mingw64\opt\include",
-                    "C:\Program Files\MiniGW\mingw64\opt\lib\libffi-3.2.1\include",
-                    "C:\Program Files\MiniGW\mingw64\x86_64-w64-mingw32\include",
-                    "C:\Program Files\MiniGW\mingw64\lib\gcc\x86_64-w64-mingw32\7.3.0\include",
-                    "C:\Program Files\MiniGW\mingw64\lib\gcc\x86_64-w64-mingw32\7.3.0\include-fixed",
-                    "C:\Program Files\MiniGW\mingw64\lib\gcc\x86_64-w64-mingw32\7.3.0\install-tools\include"
+                    "C:/Program Files/MiniGW/mingw64/include",
+                    "C:/Program Files/MiniGW/mingw64/opt/include",
+                    "C:/Program Files/MiniGW/mingw64/op/lib/libffi-3.2.1/include",
+                    "C:/Program Files/MiniGW/mingw64/x86_64-w64-mingw32/include",
+                    "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include",
+                    "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed",
+                    "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/install-tools/include"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
