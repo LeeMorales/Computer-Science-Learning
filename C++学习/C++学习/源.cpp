@@ -1,7 +1,7 @@
-#include<iostream>
-using namespace std;
+#include <stdio.h>
+#include <windows.h>
 int main()
 {
-	cout << "Hello World" << endl
-		return 0;
+    printf("hello world!/n");
+    system("pause");
 }
