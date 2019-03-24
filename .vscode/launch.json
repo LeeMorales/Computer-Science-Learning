@@ -4,6 +4,7 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         
        
         {
@@ -87,9 +88,6 @@
             "webRoot": "${workspaceFolder}"
         },
         {
-            "version": "0.2.0", //配置版本
-            "configurations": [
-                {
                     // 配置名称，在启动配置下拉菜单中显示
                     "name": "(gdb) Launch", 
                     // 调试会话开始前要运行的任务

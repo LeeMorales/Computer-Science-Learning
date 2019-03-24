@@ -1,19 +1,33 @@
 {
-    "tasks": [
-      {
-        "type": "shell",
-        "label": "g++.exe build active file",
-        "command": "C:\\Program Files\\MiniGW\\mingw64\\bin\\g++.exe",
-        "args": [
-          "-g",
-          "${file}",
-          "-o",
-          "${fileDirname}\\${fileBasenameNoExtension}.exe"
-        ],
-        "options": {
-          "cwd": "C:\\Program Files\\MiniGW\\mingw64\\bin"
-        }
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "g++.exe build active file",
+      "command": "C:\\Program Files\\MiniGW\\mingw64\\bin\\g++.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\Program Files\\MiniGW\\mingw64\\bin"
       }
-    ],
-    "version": "2.0.0"
-  }
+    },
+    {
+      "type": "shell",
+      "label": "cpp.exe build active file",
+      "command": "C:\\Program Files\\MiniGW\\mingw64\\bin\\cpp.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\Program Files\\MiniGW\\mingw64\\bin"
+      }
+    }
+  ],
+  "version": "2.0.0"
+}
