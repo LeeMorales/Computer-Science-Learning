@@ -91,7 +91,7 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}",
+            "program": "${workspaceRoot}output.out",
             "args": ["arg1", "arg2"],
             "environment": [{"name": "squid", "value": "clam"}],
             "cwd": "${workspaceRoot}"
