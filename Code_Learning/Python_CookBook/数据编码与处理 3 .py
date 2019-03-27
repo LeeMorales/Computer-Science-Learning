@@ -56,4 +56,4 @@ class XMLNamespaces:
 if __name__ == '__main__':
     ns = XMLNamespaces(html='http://www.w3.org/1999/xhtml')
     # doc.find(ns('content/{html}html'))
-    # doc.findtext(ns('content/{html}html/{html}head/{html}title'))
+    # doc.findtext(ns('content/{html}html/{html}head/{html}title'))uu
