@@ -11,5 +11,6 @@
     "python.linting.pylintEnabled": true,
     "python.pythonPath": "C:\\Users\\grand\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
     "editor.quickSuggestions": false,
-    "sde.buildOnSave": true
+    "sde.buildOnSave": true,
+    "C_Cpp.errorSquiggles": "Disabled"
 }
