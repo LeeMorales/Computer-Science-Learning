@@ -1,5 +1,5 @@
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg"></a>
-https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat https://badges.frapsoft.com/os/v2/open-source.svg?v=102
+<a href="https://img.shields.io"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg"></a> 
 # Code Study Project Introduction
 Hello everyone! Lately I've been working on my code learning project, however, due to my poor coding abiliy, some of them could not actually run properly, so if you can fix it, please contact me at grandtheftauto710@outlook.com, I am looking forward to your reply. Thanks a lot!
 
