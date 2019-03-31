@@ -1,8 +1,11 @@
-# Code Study Project Introduction
-Hello everyone! Lately I've been working on my code learning project, however, due to my poor coding abiliy, some of them could not actually run properly, so if you can fix it, please contact me at grandtheftauto710@outlook.com, I am looking forward to your reply. Thanks a lot!
+# Code Study Project 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg"></a>
 <a href="https://img.shields.io"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg"></a> 
+
+# Introduction
+Hello everyone! Lately I've been working on my code learning project, however, due to my poor coding abiliy, some of them could not actually run properly, so if you can fix it, please contact me at grandtheftauto710@outlook.com, I am looking forward to your reply. Thanks a lot!
+
 # Lately Update
 I update the PythonLearning.py and Python_CookBook.py, but now it still have a bunch of problems, the first is in python_sookbook.py, on line 1413 to line 1514, I don't know why that the VS Code continue reported me about "permutation error" same as the PythonLearning.py. And apprently, the code which in the  pythonlearning.py has some loop that just won't stop(I cna only comment it out temporarily to let the program run later). So if any know how to solve this problem, please email me at 1789216340lhy@gmail.com Thanks a lot!
 
