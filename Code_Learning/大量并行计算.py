@@ -48,7 +48,7 @@ fractal = numpy.zeros(z.shape,dtype=numpy.uint8)+MAX_COLOR
 
 
 def compute_frac(iter):
-    import numpy
+    
     ITERATIONS = 250
     SIZE = 256
     MAX_COLOR = 255.
