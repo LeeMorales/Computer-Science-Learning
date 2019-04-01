@@ -3,8 +3,8 @@
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg"></a>
 <a href="https://img.shields.io"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg"></a> 
 <a href="https://img.shields.io"><img src="https://img.shields.io/badge/Python-Learing-red.svg"></a>
-[![Lee's Design](http://brand.phodal.com/shields/design-small.svg)](https://www.phodal.com/)
-[![Lee's Idea](http://brand.phodal.com/shields/idea-small.svg)](http://ideas.phodal.com/)
+<a href="https://img.shields.io"><img src="https://img.shields.io/badge/Creative-Design%26Build-blue.svg"></a>
+<a href="https://img.shields.io"><img src="https://img.shields.io/badge/LeeMorales-Computer%20Science-brightgreen.svg"></a>
 # Introduction
 Hello everyone! This repositories is the code collection of my python learning and Swift/C/C++ learning. If you have any idea, please contact me on issue pages. Thanks!
 
