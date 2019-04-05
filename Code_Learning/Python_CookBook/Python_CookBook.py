@@ -18,9 +18,9 @@ def do_foo(x,y):
 def do_bar(s):
     print('bar', s)
 def args():
-    for tag, *args in records:
+    for tag, args in records:
         if tag == 'foo':
-            do_foo(args)
+            do_foo(args, tag)
         elif tag == 'bar':
             do_bar(args)
 
@@ -251,10 +251,10 @@ def is_int(val):
     ivals = list(filter(is_int, values))
     print(ivals)
     # Outputs ['1', '2', '-3', '4', '5']
-
+    def mylist(): 
     # 条件过滤
-    clip_neg = [n if n > 0 else 0 for n in mylist]
-    print(clip_neg)
+        clip_neg = [n if n > 0 else 0 for n in mylist]
+        print(clip_neg)
 
     addresses = [
         '5412 N CLARK',
@@ -402,16 +402,8 @@ def trans_reduce():
         # Add a new mapping
         values = values.new_child()
         values['x'] = 2
-        # Add a new mapping
-        values = values.new_child()
         values['x'] = 3
         print(values)
-        print(values['x'])
-        # Discard last mapping
-        values = values.parents
-        print(values['x'])
-        # Discard last mapping
-        values = values.parents
         print(values['x'])
         print(values)
 
