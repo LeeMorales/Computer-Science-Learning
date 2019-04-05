@@ -5,13 +5,12 @@
             "version": "0.2.0",
             "configurations": [
                 {
-                    "name": "Python: Terminal (external)",
+                    "name": "Python: Terminal (integrated)",
                     "type": "python",
                     "request": "launch",
                     "program": "${file}",
-                    "console": "externalTerminal"
+                    "console": "integratedTerminal"
                 },
-                
                 {
                     "type": "node",
                     "request": "launch",
