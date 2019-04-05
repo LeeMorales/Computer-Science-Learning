@@ -621,11 +621,12 @@ class ExpressionEvaluator:
     '''
 
     def parse(self, text):
-        self.tokens = generate_tokens(text)
-        self.tok = None  # Last symbol consumed
-        self.nexttok = None  # Next symbol tokenized
-        self._advance()  # Load first lookahead token
-        return self.expr()
+        def pat():
+            self.tokens = generate_tokens(pat, text)
+            self.tok = None  # Last symbol consumed
+            self.nexttok = None  # Next symbol tokenized
+            self._advance()  # Load first lookahead token
+            return self.expr()
 
     def _advance(self):
         'Advance one token ahead'
