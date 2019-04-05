@@ -867,7 +867,7 @@ import cmath
 
 def complex_math():
     a = complex(2, 4)
-    b = 3 - 5j
+    b = 3 - 5
     print(a.conjugate())
 
     # 正弦 余弦 平方根等
@@ -920,7 +920,6 @@ def frac():
 if __name__ == '__main__':
     frac()
 
-import numpy as np
 
 
 def array_numpy():
