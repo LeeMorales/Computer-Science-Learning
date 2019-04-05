@@ -626,7 +626,7 @@ class ExpressionEvaluator:
             self.tok = None  # Last symbol consumed
             self.nexttok = None  # Next symbol tokenized
             self._advance()  # Load first lookahead token
-            return self.expr()
+            return self.expr()                                                                                                             
 
     def _advance(self):
         'Advance one token ahead'
