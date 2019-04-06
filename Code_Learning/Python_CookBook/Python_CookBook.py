@@ -1877,11 +1877,11 @@ def change_open_encode():
     u = urllib.request.urlopen('http://www.python.org')
     f = io.TextIOWrapper(u, encoding='utf-8')
     text = f.read()
-print(sys.stdout.encoding)
-
+    print(sys.stdout.encoding)
     sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='latin-1')
     print(sys.stdout.encoding)
-f = open('sample.txt','w')
+
+    f = open('sample.txt','w')
     print(f)
     print(f.buffer)
     print(f.buffer.raw)
@@ -1915,7 +1915,7 @@ def echo_client(client_sock, addr):
 client_out = open(client_sock.fileno(), 'wt', encoding='latin-1',
                       closefd=False)
 # Echo lines back to the client using file I/O
-    for line in client_in:
+for line in client_in:
         client_out.write(line)
         client_out.flush()
 client_sock.close()
@@ -1928,7 +1928,7 @@ def echo_server(address):
         echo_client(client, addr)
 if __name__ == '__main__':
     file_descriptor()
-tempfile.Temporaryfile:
+tempfile.Temporaryfile
 from tempfile import TemporaryFile
 from tempfile import TemporaryDirectory
 from tempfile import NamedTemporaryFile
@@ -1942,14 +1942,14 @@ def temp_file():
         f.seek(0)
         data = f.read()
         print(data)
- with NamedTemporaryFile('w+t') as f:
+with NamedTemporaryFile('w+t') as f:
         print('filename is:', f.name)
 #创建一个临时目录
-    with TemporaryDirectory() as dirname:
+with TemporaryDirectory() as dirname:
         print('dirname is:', dirname)
 print(tempfile.mkstemp())
-    print(tempfile.mkdtemp())
-    print(tempfile.gettempdir())
+print(tempfile.mkdtemp())
+print(tempfile.gettempdir())
 if __name__ == '__main__':
     temp_file()
 import serial
@@ -1968,21 +1968,21 @@ def serailize_object():
     data = [1, 2, 3]
     f = open('somefile', 'wb')
     pickle.dump(data, f)
-s = pickle.dumps(data)
+    s = pickle.dumps(data)
 # Restore from a file
     f = open('somefile', 'rb')
     data = pickle.load(f)
 # Restore from a string
     data = pickle.loads(s)
 f = open('somedata', 'wb')
-    pickle.dump([1, 2, 3, 4], f)
-    pickle.dump('hello', f)
-    pickle.dump({'Apple', 'Pear', 'Banana'}, f)
-    f.close()
+pickle.dump([1, 2, 3, 4], f)
+pickle.dump('hello', f)
+pickle.dump({'Apple', 'Pear', 'Banana'}, f)
+f.close()
 f = open('somedata', 'rb')
-    print(pickle.load(f))
-    print(pickle.load(f))
-    print(pickle.load(f))
+print(pickle.load(f))
+print(pickle.load(f))
+print(pickle.load(f))
 if __name__ == '__main__':
     serailize_object()
 # countdown.py
@@ -2118,4 +2118,4 @@ def rw_json():
 
 if __name__ == '__main__':
     rw_json()
-################################################################################
+###################################
