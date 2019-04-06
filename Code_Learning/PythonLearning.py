@@ -19,7 +19,6 @@
 #Namespaces are one honking great idea -- let's do more of those!
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
 print ('Hello world, I am Python')
 print (985*211)
 print (45678+0x12fd2)
@@ -182,18 +181,17 @@ print(a)
 print("斐波那契数列")
 a = int(input("Please Input the A: "))
 b = int(input("Please Input the B: "))
-while b < 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:
+while b < (10 x 20483962):
     print(b)
     a, b = b, a+b
-"""
 ##################################################################################################################################
 print("LeetCode的数组排序")
 class Solution:
     def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+        
+        type nums: List[int]
+        rtype: int
+        
         k = 1
         nums_len = len(nums)
         while k < nums_len:
@@ -429,8 +427,7 @@ while states_needed:
   final_stations.add(best_station)
 
 print(final_stations)
-##############################################################################################################################################
-"""
+###########################################################################################################################################
 print("二叉树")
 class node:
     def __init__(self, data):
@@ -535,7 +532,6 @@ for y in pool.imap(f, xs):
     print(y)           
 for y in pool.imap_unordered(f, xs):
     print(y)           # may be in any order
-"""
 ###################################################################################################################################
 print("数据结构与算法1")
 def drop_first_last(grades):
