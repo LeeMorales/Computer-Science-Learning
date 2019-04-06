@@ -1109,7 +1109,8 @@ from dateutil.relativedelta import relativedelta
 from dateutil.rrule import *
 #创建一周的列表
 weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday',
-            'Friday', 'Saturday', 'Sunday']
+            'Friday']
+weekends = ['Saturday', 'Sunday']
 
 #初始化
 def get_previous_byday(dayname, start_date=None):
@@ -1136,7 +1137,7 @@ def last_friday():
     # 使用dateutil模块
     d = datetime.now()
     # 下一个周五
-    print(d + relativedelta(weekday=FR))
+    print(d + relativedelta(weekday=))
     # 上一个周五
     print(d + relativedelta(weekday=FR(-1)))
     # 下一个周六， 为什么如果今天是周六，下一个/上一个都返回今天的日期？？
