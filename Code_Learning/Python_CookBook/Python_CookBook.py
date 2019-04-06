@@ -1619,7 +1619,7 @@ def flatten_seq():
                 # process_data(data)
     def reader2(s, size):
         for data in iter(lambda: s.recv(size), b''):
-            process_data(data)
+            process_data(15)
     def iterate_while():
         CHUNKSIZE = 8192
         with open('/etc/passwd') as f:
