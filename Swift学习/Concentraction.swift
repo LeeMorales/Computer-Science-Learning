@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController 
+{
+    var flipCount: Int = 0 
+
     @IBAction func touchCard(_ sender: UIButton){
+        flipCount += 1
+        flipCard(withEmoji:"🤣", on: sender)
+    }
+    @IBAction func touchSecondCard(_ sender: UIButton){
+        flipCount += 1
         flipCard(withEmoji:"🤣", on: sender)
     }
     func flipCard(withEmoji emoji: String, on button: UIButton){
