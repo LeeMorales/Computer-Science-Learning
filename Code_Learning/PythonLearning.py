@@ -45,7 +45,7 @@ for line in handle:
 
 bigcount = None
 bigword = None
-for word, count in list(counts.items()):
+for word, count in list[counts.items()]:
     if bigcount is None or count > bigcount:
         bigword = word
         bigcount = count
@@ -189,10 +189,10 @@ while b < 20483219993:
 print("LeetCode的数组排序")
 class Solution:
     def removeDuplicates(self, nums):
-        
+        """
         type nums: List[int]
         rtype: int
-        
+        """
         k = 1
         nums_len = len(nums)
         while k < nums_len:
