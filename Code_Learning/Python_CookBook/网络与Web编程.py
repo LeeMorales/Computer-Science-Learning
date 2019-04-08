@@ -1,5 +1,6 @@
 from urllib import request, parse
-
+from http.client import HTTPConnection
+from urllib import parse
 # Base URL being accessed
 url = 'http://httpbin.org/get'
 
@@ -15,8 +16,6 @@ querystring = parse.urlencode(parms)
 # Make a GET request and read the response
 u = request.urlopen(url+'?' + querystring)
 resp = u.read()
-
-from urllib import request, parse
 
 # Base URL being accessed
 url = 'http://httpbin.org/post'
@@ -34,9 +33,6 @@ querystring = parse.urlencode(parms)
 u = request.urlopen(url, querystring.encode('ascii'))
 resp = u.read()
 
-from urllib import request, parse
-...
-
 # Extra headers
 headers = {
     'User-agent' : 'none/ofyourbusiness',
@@ -48,8 +44,6 @@ req = request.Request(url, querystring.encode('ascii'), headers=headers)
 # Make a request and read the response
 u = request.urlopen(req)
 resp = u.read()
-
-import requests
 
 # Base URL being accessed
 url = 'http://httpbin.org/post'
@@ -71,8 +65,6 @@ resp = requests.post(url, data=parms, headers=headers)
 # Decoded text returned by the request
 text = resp.text
 
-import requests
-
 resp = requests.head('http://www.python.org/index.html')
 
 status = resp.status_code
@@ -80,8 +72,7 @@ last_modified = resp.headers['last-modified']
 content_type = resp.headers['content-type']
 content_length = resp.headers['content-length']
 
-from http.client import HTTPConnection
-from urllib import parse
+
 
 c = HTTPConnection('www.python.org', 80)
 c.request('HEAD', '/index.html')
