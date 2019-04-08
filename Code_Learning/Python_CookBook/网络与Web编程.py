@@ -59,11 +59,11 @@ headers = {
     'User-agent' : 'none/ofyourbusiness',
     'Spam' : 'Eggs'
 }
-
-resp = requests.post(url, data=parms, headers=headers)
+def requests():
+   resp = requests.post(url, data=parms, headers=headers)
 
 # Decoded text returned by the request
-text = resp.text
+   text = resp.text
 
 resp = requests.head('http://www.python.org/index.html')
 
