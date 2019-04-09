@@ -23,14 +23,13 @@ class EchoHandler(StreamRequestHandler):
         for line in self.rfile:
             # self.wfile is a file-like object for writing
             self.wfile.write(line)
+        if __name__ == '__main__':
+            serv = TCPServer(('', 20000), EchoHandler)
+            serv.serve_forever()
 
-if __name__ == '__main__':
-    serv = TCPServer(('', 20000), EchoHandler)
-    serv.serve_forever()
-
-if __name__ == '__main__':
-    serv = ThreadingTCPServer(('', 20000), EchoHandler)
-    serv.serve_forever()
+        if __name__ == '__main__':
+            serv = ThreadingTCPServer(('', 20000), EchoHandler)
+            serv.serve_forever()
 
 if __name__ == '__main__':
     from threading import Thread
