@@ -1,4 +1,8 @@
 from socketserver import BaseRequestHandler, TCPServer
+from socketserver import StreamRequestHandler, TCPServer
+from socketserver import ThreadingTCPServer
+import socket
+from socket import socket, AF_INET, SOCK_STREAM
 
 class EchoHandler(BaseRequestHandler):
     def handle(self):
@@ -13,9 +17,6 @@ class EchoHandler(BaseRequestHandler):
 if __name__ == '__main__':
     serv = TCPServer(('', 20000), EchoHandler)
     serv.serve_forever()
-
-from socketserver import StreamRequestHandler, TCPServer
-
 class EchoHandler(StreamRequestHandler):
     def handle(self):
         print('Got connection from', self.client_address)
@@ -27,9 +28,6 @@ class EchoHandler(StreamRequestHandler):
 if __name__ == '__main__':
     serv = TCPServer(('', 20000), EchoHandler)
     serv.serve_forever()
-
-from socketserver import ThreadingTCPServer
-
 
 if __name__ == '__main__':
     serv = ThreadingTCPServer(('', 20000), EchoHandler)
@@ -58,9 +56,6 @@ if __name__ == '__main__':
     TCPServer.allow_reuse_address = True
     serv = TCPServer(('', 20000), EchoHandler)
     serv.serve_forever()
-
-import socket
-
 class EchoHandler(StreamRequestHandler):
     # Optional settings (defaults shown)
     timeout = 5                      # Timeout on all socket operations
@@ -75,9 +70,6 @@ class EchoHandler(StreamRequestHandler):
                 self.wfile.write(line)
         except socket.timeout:
             print('Timed out!')
-
-from socket import socket, AF_INET, SOCK_STREAM
-
 def echo_handler(address, client_sock):
     print('Got connection from {}'.format(address))
     while True:
