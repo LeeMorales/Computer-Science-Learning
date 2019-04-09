@@ -3,7 +3,6 @@ from socketserver import StreamRequestHandler, TCPServer
 from socketserver import ThreadingTCPServer
 import socket
 from socket import socket, AF_INET, SOCK_STREAM
-
 class EchoHandler(BaseRequestHandler):
     def handle(self):
         print('Got connection from', self.client_address)
