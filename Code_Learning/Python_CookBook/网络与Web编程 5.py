@@ -1,5 +1,6 @@
 from xmlrpc.server import SimpleXMLRPCServer
-
+from multiprocessing.connection import Listener
+import traceback
 class KeyValueServer:
     _rpc_methods_ = ['get', 'set', 'delete', 'exists', 'keys']
     def __init__(self, address):
@@ -30,8 +31,6 @@ class KeyValueServer:
 if __name__ == '__main__':
     kvserv = KeyValueServer(('', 15000))
     kvserv.serve_forever()
-
-from xmlrpc.server import SimpleXMLRPCServer
 def add(x,y):
     return x+y
 
@@ -39,8 +38,7 @@ serv = SimpleXMLRPCServer(('', 15000))
 serv.register_function(add)
 serv.serve_forever()
 
-from multiprocessing.connection import Listener
-import traceback
+
 
 def echo_client(conn):
     try:
