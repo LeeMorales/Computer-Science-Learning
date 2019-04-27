@@ -22,22 +22,18 @@ t1 = Thread(target=consumer, args=(q,))
 t2 = Thread(target=producer, args=(q,))
 t1.start()
 t2.start()
-
-from queue import Queue
-from threading import Thread
-
-# Object that signals shutdown
-_sentinel = object()
-
-# A thread that produces data
-def producer(out_q):
-    while running:
-        # Produce some data
-        ...
+def running():
+    # Object that signals shutdown
+    _sentinel = object()
+    # A thread that produces data
+    def producer(out_q):
+        while running:
+            # Produce some data
+            ...
         out_q.put(data)
 
     # Put the sentinel on the queue to indicate completion
-    out_q.put(_sentinel)
+        out_q.put(_sentinel)
 
 # A thread that consumes data
 def consumer(in_q):
