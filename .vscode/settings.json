@@ -12,5 +12,19 @@
     "python.pythonPath": "/anaconda3/bin/python",
     "editor.quickSuggestions": false,
     "sde.buildOnSave": true,
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.testing.pyTestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pyTestEnabled": false,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Code_Learning",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.promptToConfigure": false
 }
