@@ -1,4 +1,4 @@
-"""
+
 print("迭代器和生成器1")
 def manual_iter():
     with open('D:/CodeHackProject/Examples/1.txt') as f:
@@ -72,7 +72,6 @@ def gen_pattern():
 
 if __name__ == '__main__':
     gen_pattern()
-"""    
 ###################################################################
 print("迭代器和生成器3")
 import itertools
