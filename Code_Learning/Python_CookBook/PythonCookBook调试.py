@@ -1,4 +1,3 @@
-
 print("迭代器和生成器1")
 def manual_iter():
     with open('D:/CodeHackProject/Examples/1.txt') as f:
