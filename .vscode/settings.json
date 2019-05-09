@@ -9,7 +9,7 @@
         "**/.factorypath": true
     },
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "/anaconda3/bin/python",
+    "python.pythonPath": "D:\\Anaconda\\python.exe",
     "editor.quickSuggestions": false,
     "sde.buildOnSave": true,
     "C_Cpp.errorSquiggles": "Disabled",
@@ -26,5 +26,6 @@
         "-p",
         "*test.py"
     ],
-    "python.testing.promptToConfigure": false
+    "python.testing.promptToConfigure": false,
+    "python.linting.enabled": true
 }
