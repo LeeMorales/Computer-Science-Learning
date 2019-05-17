@@ -99,11 +99,15 @@ def is_int(val):
     ivals = list(filter(is_int, values))
     print(ivals)
     # Outputs ['1', '2', '-3', '4', '5']
+    """
     def mylist(): 
     # 条件过滤
-        clip_neg = [n if n > 0 else 0 for n in mylist]
+        clip_neg = [n 
+        if n > 0 
+        else 0 
+        for n in mylist]
         print(clip_neg)
-
+    """
     addresses = [
         '5412 N CLARK',
         '5148 N CLARK',
