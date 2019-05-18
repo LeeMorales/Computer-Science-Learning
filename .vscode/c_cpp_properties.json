@@ -1,40 +1,19 @@
 {
     "configurations": [
         {
-            "name": "Win32",
-            "intelliSenseMode": "msvc-x64",
+            "name": "Mac",
             "includePath": [
-                "${workspaceFolder}",
-                "C:/Program Files/MiniGW/mingw64/include",
-                "C:/Program Files/MiniGW/mingw64/opt/include",
-                "C:/Program Files/MiniGW/mingw64/opt/lib/libffi-3.2.1/include",
-                "C:/Program Files/MiniGW/mingw64/x86_64-w64-mingw32/include",
-                "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include",
-                "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed",
-                "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/install-tools/include"
+                "${workspaceFolder}/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "__GNUC__=7",
-                "__cdecl=__attribute__((__cdecl__))"
+            "defines": [],
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
             ],
-            "browse": {
-                "path": [
-                    "${workspaceFolder}",
-                    "C:/Program Files/MiniGW/mingw64/include",
-                    "C:/Program Files/MiniGW/mingw64/opt/include",
-                    "C:/Program Files/MiniGW/mingw64/opt/lib/libffi-3.2.1/include",
-                    "C:/Program Files/MiniGW/mingw64/x86_64-w64-mingw32/include",
-                    "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include",
-                    "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed",
-                    "C:/Program Files/MiniGW/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/install-tools/include"
-                ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
-            },
+            "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
-            "cppStandard": "c++17"
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
         }
     ],
     "version": 4
