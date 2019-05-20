@@ -10,6 +10,7 @@ Hello everyone! This repositories is the code collection of my python learning a
 
 # Lately Update
 I seperate the python cookbook and make each python example to a single python file.
+And I update to the C langurage support for python
 
 # A poem for you
 Beautiful is better than ugly.
