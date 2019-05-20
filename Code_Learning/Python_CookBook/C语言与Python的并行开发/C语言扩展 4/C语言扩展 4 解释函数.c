@@ -1,4 +1,4 @@
-#include <C语言扩展 4 Python.h>
+#include <Python.h>
 
 /* Definition of call_func() same as above */
 ...

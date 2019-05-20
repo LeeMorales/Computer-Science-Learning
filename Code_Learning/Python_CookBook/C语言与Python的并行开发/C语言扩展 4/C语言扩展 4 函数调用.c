@@ -1,4 +1,4 @@
-#include <C语言扩展 4 Python.h>
+#include <Python.h>
 
 /* Execute func(x,y) in the Python interpreter.  The
    arguments and return result of the function must
