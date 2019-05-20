@@ -1,6 +1,5 @@
 #include "Python.h"
 #include "sample.h"
-
 /* int gcd(int, int) */
 static PyObject *py_gcd(PyObject *self, PyObject *args) {
   int x, y, result;
