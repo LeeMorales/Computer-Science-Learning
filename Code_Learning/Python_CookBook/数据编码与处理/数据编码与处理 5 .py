@@ -63,7 +63,7 @@ def write_polys(filename, polys):
                     with open(filename, 'rb') as f: 
                         # Read the header 
                         header = f.read(40) 
-                        file_code, min_x, min_y, max_x, max_y, num_polys = \             
+                        file_code, min_x, min_y, max_x, max_y, num_polys = \
                         struct.unpack('<iddddi', header) 
                         polys = [] 
                         for n in range(num_polys): 
