@@ -27,5 +27,8 @@
         "*test.py"
     ],
     "python.testing.promptToConfigure": false,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "cSpell.words": [
+        "if"
+    ]
 }

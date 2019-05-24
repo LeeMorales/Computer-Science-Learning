@@ -1,12 +1,12 @@
 #!/usr/bin/python #-*- coding:utf-8 -*- 
 import argparse
-import os
 import json
-import urllib
-import ssl
-import sys
+import os
 import re
 import socket
+import ssl
+import sys
+import urllib
 from datetime import datetime
 
 PURPOSE_CODES   = ['ADULT', '0X00'] # 成人票，学生票
@@ -23,16 +23,15 @@ return '-'.join([str(now.year), str(add_zero(now.month)), str(add_zero(now.day))
 return default_date(
 res = re.match(r'(([0-9]{4})[-|\\|:])?([0-9]{1,2})[-|\\|:]([0-9]{2})', input_date)
 if res:
-        year  = res.group(2)
-        month = res.group(3)
-        day   = res.group(4)
-        now = datetime.now()
-        if not year:
-            year = now.year
-            if not month:
-                month = now.month
-                if not day:
-                    day = now.day
+    year  = res.group(2)
+    month = res.group(3)
+    day   = res.group(4)
+    now = datetime.now()
+    
+ifelse:
+    year = now.year
+    month = now.month
+    day = now.day
                     return '-'.join([str(year), add_zero(str(month)), str(day)])
 else:
         print ('输入日期格式错误')
