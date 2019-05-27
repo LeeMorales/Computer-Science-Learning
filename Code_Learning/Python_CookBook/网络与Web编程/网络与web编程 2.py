@@ -58,6 +58,7 @@ if __name__ == '__main__':
     rbufsize = -1                    # Read buffer size
     wbufsize = 0                     # Write buffer size
     disable_nagle_algorithm = False  # Sets TCP_NODELAY socket option
+def self():
     print('Got connection from', self.client_address)
 try:
     for line in self.rfile:
