@@ -9,7 +9,7 @@
         "**/.factorypath": true
     },
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
+    "python.pythonPath": "D:\\Anaconda\\python.exe",
     "editor.quickSuggestions": false,
     "sde.buildOnSave": true,
     "C_Cpp.errorSquiggles": "Disabled",
