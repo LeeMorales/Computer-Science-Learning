@@ -9,7 +9,7 @@ def binary_search(list, item):
 #----------------------------------
 ##只要范围没有缩小到只包含一个元素就检查中间元素
     while low <= high:
-        mid = (low + high) / 2
+        mid = (low + high) // 2
         guess = list[mid]
 #----------------------------------
 ##找到了元素
