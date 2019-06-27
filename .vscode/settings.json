@@ -32,8 +32,8 @@
         "if"
     ]
     "vscode_custom_css.imports": [
-        "file:///Users/MyUserName/Documents/custom.css",
-        "file:///Users/MyUserName/Documents/custom.js"
+        "file:///Users/leemorales/Computer-Science-Learning/custom.css",
+        "file:///Users/leemorales/Computer-Science-Learning/custom.js"
         ],
     "vscode_custom_css.policy": true
 }
