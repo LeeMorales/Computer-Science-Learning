@@ -31,9 +31,4 @@
     "cSpell.words": [
         "if"
     ]
-    "vscode_custom_css.imports": [
-        "file:///Users/leemorales/Computer-Science-Learning/custom.css",
-        "file:///Users/leemorales/Computer-Science-Learning/custom.js"
-        ],
-    "vscode_custom_css.policy": true
 }
