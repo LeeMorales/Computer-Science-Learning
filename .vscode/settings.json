@@ -31,4 +31,9 @@
     "cSpell.words": [
         "if"
     ]
+    "vscode_custom_css.imports": [
+        "file:///Users/MyUserName/Documents/custom.css",
+        "file:///Users/MyUserName/Documents/custom.js"
+        ],
+    "vscode_custom_css.policy": true
 }
