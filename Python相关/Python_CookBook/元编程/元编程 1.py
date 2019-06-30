@@ -1,7 +1,6 @@
 import time
 from functools import wraps
-
-
+from inspect import signature
 def timethis(func):
     '''
     Decorator that reports the execution time.
@@ -25,17 +24,11 @@ def countdown(n):
 countdown(100000)
 countdown(10000000)
 
-@timethis
-
 print(countdown.__name__)
 print(countdown.__doc__)
 print(countdown.__annotations__)
-from inspect import signature
-
 print(signature(countdown)) 
-
-from functools import wraps
-
+@timethis
 
 def decorator1(func):
     @wraps(func)
