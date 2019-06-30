@@ -1,4 +1,6 @@
 def findSmallest (arr):
+#----------------------------------
+##存储最小的值
     smallest = arr[0]
     smallest_index = 0
     for i in range (1, len(arr)):
