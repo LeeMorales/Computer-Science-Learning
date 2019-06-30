@@ -26,13 +26,6 @@ countdown(100000)
 countdown(10000000)
 
 @timethis
-def countdown(n: int):
-    """
-    Counts down
-    """
-    while n > 0:
-        n -= 1
-
 
 print(countdown.__name__)
 print(countdown.__doc__)
