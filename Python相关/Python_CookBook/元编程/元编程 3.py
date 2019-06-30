@@ -95,16 +95,11 @@ class Profiled:
             return self
         else:
             return types.MethodType(self, instance)
-
 @Profiled
-def add(x, y):
-    return x + y
-
 class Spam:
     @Profiled
     def bar(self, x):
         print(self, x)
-
 import types
 from functools import wraps
 
@@ -117,8 +112,3 @@ def profiled(func):
         return func(*args, **kwargs)
     wrapper.ncalls = lambda: ncalls
     return wrapper
-
-# Example
-@profiled
-def add(x, y):
-    return x + y
