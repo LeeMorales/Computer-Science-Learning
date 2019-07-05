@@ -7,4 +7,4 @@ def sum(arr):
         for x in sum:
             total + x
             return total    
-print (total)
+    print (total)
