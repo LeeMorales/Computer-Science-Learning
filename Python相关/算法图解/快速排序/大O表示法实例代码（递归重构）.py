@@ -1,7 +1,10 @@
+sum = input("Please imput your array")
 def sum(arr):
     total = 0
-    for x in arr:
-        total += x
-    return total
-
-print (sum([1, 2, 3, 4]))
+    if sum = 0:
+        print("Total is 0")
+    else:
+        for x in arr:
+            total += x
+        return total    
+        print (sum)
