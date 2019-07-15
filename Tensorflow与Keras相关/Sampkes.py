@@ -1,8 +1,5 @@
 import tensorflow as tf
-import torch as th
 import numpy as np
-import tfpyth
-
 session = tf.Session()
 def get_torch_function():
     a = tf.placeholder(tf.float32, name='a')
