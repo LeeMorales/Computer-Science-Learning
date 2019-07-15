@@ -3,6 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks",
                 "${workspaceFolder}/**"
             ],
             "defines": [],
