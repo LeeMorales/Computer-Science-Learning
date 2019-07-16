@@ -9,7 +9,8 @@
         "**/.factorypath": true
     },
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "/usr/local/bin/python3",
+    "python.pythonPath": "usr/local/bin/python3",
+    "python.pythonPath": "C:\\Users\\grand\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
     "editor.quickSuggestions": false,
     "sde.buildOnSave": true,
     "C_Cpp.errorSquiggles": "Disabled",
