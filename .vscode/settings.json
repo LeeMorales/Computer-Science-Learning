@@ -30,5 +30,7 @@
     "cSpell.words": [
         "if"
     ],
-    "python.pythonPath": "/usr/bin/python3"
+    "python.pythonPath": "/usr/bin/python3"[
+    ],
+    "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
 }
