@@ -36,15 +36,15 @@ def running():
         out_q.put(_sentinel)
 
 # A thread that consumes data
-def consumer(in_q):
-    while True:
-        # Get some data
-        data = in_q.get()
+    def consumer(in_q):
+        while True:
+            # Get some data
+            data = in_q.get()
 
         # Check for termination
-        if data is _sentinel:
-            in_q.put(_sentinel)
-            break
+            if data is _sentinel:
+                in_q.put(_sentinel)
+                break
 
         # Process the data
         ...
@@ -53,11 +53,10 @@ from queue import Queue
 from threading import Thread
 
 # A thread that produces data
-def producer(out_q):
-    while running:
+def consumer(out_q):
+        while running:
         # Produce some data
-        ...
-        out_q.put(data)
+            out_q.put(data)
 
 # A thread that consumes data
 def consumer(in_q):
@@ -84,15 +83,15 @@ from queue import Queue
 from threading import Thread, Event
 
 # A thread that produces data
-def producer(out_q):
+def consumer(out_q):
     while running:
-        # Produce some data
+# Produce some data
         ...
-        # Make an (data, event) pair and hand it to the consumer
+# Make an (data, event) pair and hand it to the consumer
         evt = Event()
         out_q.put((data, evt))
         ...
-        # Wait for the consumer to process the item
+# Wait for the consumer to process the item
         evt.wait()
 
 # A thread that consumes data
