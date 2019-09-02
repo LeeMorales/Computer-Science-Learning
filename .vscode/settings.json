@@ -11,9 +11,9 @@
     "python.linting.pylintEnabled": true,
     "editor.quickSuggestions": false,
     "sde.buildOnSave": true,
-    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.errorSquiggles": "Enabled",
     "python.testing.pytestArgs": [
-        "."
+     
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
