@@ -1,0 +1,171 @@
+The system is: Windows - 10.0.18970 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCCompilerId.c
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCXXCompilerId.cpp
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/W3
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCCompilerId.c
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCXXCompilerId.cpp
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/W3
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCCompilerId.c
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCXXCompilerId.cpp
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/W3
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCCompilerId.c
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCXXCompilerId.cpp
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/W3
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCCompilerId.c
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.22.27905 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCXXCompilerId.cpp
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "D:/Truman-CS180-Course/lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj"
+

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab06/More_Phone_Plan.cpp
+iostream
+-
+iomanip
+-
+

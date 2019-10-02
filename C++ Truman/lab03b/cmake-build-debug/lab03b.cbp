@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lab03b"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab03b">
+				<Option output="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/lab03b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab03b"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab03b/fast">
+				<Option output="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/lab03b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab03b/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/Java_Joe.cpp">
+			<Option target="lab03b"/>
+		</Unit>
+		<Unit filename="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
