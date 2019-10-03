@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
   ifstream in_file;
-  in_file.open("../scores.txt");
+  in_file.open("scores.txt");
 
   unsigned number_of_scores;
   in_file >> number_of_scores;
