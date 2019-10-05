@@ -94,7 +94,7 @@ int main()
 
     //output everything
     cout << "Now writing data to the file" << endl;
-    output_file << right << setw(WIDTH) << line << left <<
+    output_file << left << setw(WIDTH) << line << right <<
                 setw(WIDTH_BETWEEN_LINE) << "  " << setw(WIDTH_BETWEEN_LINE)
                 << min_score <<
                 setw
