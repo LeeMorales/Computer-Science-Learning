@@ -7,6 +7,7 @@ def do_foo(x,y):
     print ('foo', x, y)
 def do_bar(s):
     print('bar', s)
+
 for tag, *args in records:
     if tag == 'foo':
         do_foo(*args)
