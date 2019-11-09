@@ -1,0 +1,3 @@
+﻿  GPU_Accerlating_Calculation.cpp
+D:\CodeHackProject\Visual_Studio_C++\GPU_Accerlating_Calculation\GPU_Accerlating_Calculation.cpp(78,10): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“LPVOID”
+  GPU_Accerlating_Calculation.vcxproj -> D:\CodeHackProject\Visual_Studio_C++\GPU_Accerlating_Calculation\Debug\GPU_Accerlating_Calculation.exe
