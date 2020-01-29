@@ -32,4 +32,7 @@
     ],
     "python.pythonPath": "/usr/local/bin/python3",
     "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+    "files.associations": {
+        "iosfwd": "cpp"
+    },
 }

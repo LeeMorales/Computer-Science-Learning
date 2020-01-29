@@ -2,23 +2,17 @@
     "configurations": [
         {
             "name": "Mac",
-            "defines": [],
-            "macFrameworkPath": [
-                "/System/Library/Frameworks",
-                "/Library/Frameworks",
+            "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "compilerPath": "/usr/bin/g++",
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64",
-            "browse": {
-                "path": [
-                    "${workspaceFolder}"
-                ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
-            }
+            "cppStandard": "c++11",
+            "intelliSenseMode": "clang-x64"
         }
     ],
     "version": 4

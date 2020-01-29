@@ -16,19 +16,18 @@
             "console": "internalConsole"
         },
         {
-            "name": "C/C++ Launch",
+            "name": "c/c++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "program": "${workspaceFolder}/a.out",
             "args": [],
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "stopAtEntry": true, // if true then stop at the main entry (function)
             "environment": [],
             "externalConsole": true,
             "MIMode": "lldb",
-            "preLaunchTask": "build hello world"
-        }
-    
+            "preLaunchTask":"c++"
+        },
         {
             "name":"Python",
             "type":"python",
