@@ -1,6 +1,7 @@
-// @author: Kafi Rahman
-// The purpose of the program is to store student record information
-// by using a collection class
+// Hengyi Li
+// The purpose of the program is to store student record information by using a collection class
+//This code done by Hengyi Li at 8:30 PM 28th Jan, 2020
+//Copyright Hengyi Li
 
 #include <iomanip>
 #include <iostream>
