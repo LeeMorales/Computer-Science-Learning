@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab08/game.cpp
+iostream
+-
+iomanip
+-
+istream
+-
+fstream
+-
+cstdlib
+-
+ctime
+-
+

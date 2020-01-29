@@ -1,0 +1,20 @@
+Howerton,Chuck                ch3524
+Neighbors,Seymour             sn2611
+King,Sarah                    sk9177
+Furtivo,John                  jf1967
+de Marco,Donald               dd6121
+Liao,Christine                cl7402
+Somerfield,Lana               ls7259
+Vacca,Wynona                  wv4467
+Engelhard,Faith               fe8859
+Urbane,Chet                   cu7850
+Chyba,Ann                     ac5575
+Fisher,La Toya                lf9414
+Weerts,Powell                 pw1086
+Babo,Anna                     ab7916
+Ware,Millie                   mw7291
+Murray,Barry                  bm3118
+Russell,Carolyn               cr3878
+Reckly,Ling                   lr9231
+Burkett,Ken                   kb6945
+Cornell,Ralph                 rc5189

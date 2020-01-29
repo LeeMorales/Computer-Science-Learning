@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab14/dump.cpp
+cstdint
+-
+fstream
+-
+iomanip
+-
+iostream
+-
+

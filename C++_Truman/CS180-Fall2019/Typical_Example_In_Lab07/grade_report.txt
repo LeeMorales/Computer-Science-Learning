@@ -1,0 +1,4 @@
+Alexander Graham Bell  100  94    87.6667
+Carl Linnaeus  100  93    66.5
+Mary Anning  100  100    92.1667
+Ada Lovelace  100  91    79.3333

@@ -1,0 +1,12 @@
+Thermistor,50,10,50
+Thermistor,54,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50

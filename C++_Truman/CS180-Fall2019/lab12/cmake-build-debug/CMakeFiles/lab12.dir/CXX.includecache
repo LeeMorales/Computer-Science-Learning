@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/string.cpp
+cctype
+-
+fstream
+-
+iomanip
+-
+iostream
+-
+cstring
+-
+vector
+-
+

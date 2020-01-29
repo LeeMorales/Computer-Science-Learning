@@ -1,0 +1,4 @@
+"D:\CLion\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Truman-CS180-Course\Rock_Paper_Scissor_game_Example
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Truman-CS180-Course/Rock_Paper_Scissor_game_Example/cmake-build-debug

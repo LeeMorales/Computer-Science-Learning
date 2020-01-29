@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="POSTPONE_SUITABLE_CONFIGURATIONS_SEARCH" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+    <option name="showStatusBarWidget" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="lab16" targetName="lab16" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2797ef16-5930-414f-af32-19fc00aab82b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/binary_files.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/binary_files.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/binary_files.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab16.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab16.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab16.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab16.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory.inv" beforeDir="false" afterPath="$PROJECT_DIR$/inventory.inv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="mNKsfNrM" />
+  </component>
+  <component name="ProjectId" id="1UU2meAEDsQVMfitco2sXFuL1Rw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Truman-CS180-Course\lab16" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lab16" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lab16" RUN_TARGET_NAME="lab16" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2797ef16-5930-414f-af32-19fc00aab82b" name="Default Changelist" comment="" />
+      <created>1575397014007</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575397014007</updated>
+      <workItem from="1575397015500" duration="329000" />
+      <workItem from="1575480635945" duration="3274000" />
+      <workItem from="1575601628671" duration="4551000" />
+      <workItem from="1575656282333" duration="290000" />
+      <workItem from="1575686025655" duration="1224000" />
+      <workItem from="1575687346957" duration="1057000" />
+      <workItem from="1575688474093" duration="4097000" />
+      <workItem from="1575741291630" duration="323000" />
+      <workItem from="1575757343325" duration="390000" />
+      <workItem from="1575758174924" duration="365000" />
+      <workItem from="1576640348227" duration="2308000" />
+      <workItem from="1576654128949" duration="3830000" />
+      <workItem from="1576679367618" duration="33000" />
+      <workItem from="1576679415732" duration="296000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="189" key="#Notifications" timestamp="1575688103953">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="189" key="#Notifications/0.0.1680.1050@0.0.1680.1050" timestamp="1575688103953" />
+    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576647138692">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576647138692" />
+    <state x="613" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575482455386">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="613" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1575482455386" />
+    <state x="528" y="262" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575688431834">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="528" y="262" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1575688431834" />
+    <state x="463" y="235" key="FileChooserDialogImpl" timestamp="1576679199425">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="463" y="235" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1576679199425" />
+    <state width="1877" height="327" key="GridCell.Tab.0.bottom" timestamp="1576679714878">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1628" height="301" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1575757435248" />
+    <state width="1877" height="327" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576679714878" />
+    <state width="1628" height="301" key="GridCell.Tab.0.bottom/0.23.1680.996@0.23.1680.996" timestamp="1575757734127" />
+    <state width="1877" height="327" key="GridCell.Tab.0.center" timestamp="1576679714878">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1628" height="301" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1575757435247" />
+    <state width="1877" height="327" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576679714878" />
+    <state width="1628" height="301" key="GridCell.Tab.0.center/0.23.1680.996@0.23.1680.996" timestamp="1575757734125" />
+    <state width="1877" height="327" key="GridCell.Tab.0.left" timestamp="1576679714878">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1628" height="301" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1575757435246" />
+    <state width="1877" height="327" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576679714878" />
+    <state width="1628" height="301" key="GridCell.Tab.0.left/0.23.1680.996@0.23.1680.996" timestamp="1575757734124" />
+    <state width="1877" height="327" key="GridCell.Tab.0.right" timestamp="1576679714878">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1628" height="301" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1575757435247" />
+    <state width="1877" height="327" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576679714878" />
+    <state width="1628" height="301" key="GridCell.Tab.0.right/0.23.1680.996@0.23.1680.996" timestamp="1575757734126" />
+    <state width="1877" height="327" key="GridCell.Tab.1.bottom" timestamp="1576679714878">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="327" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576679714878" />
+    <state width="1877" height="327" key="GridCell.Tab.1.center" timestamp="1576679714878">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="327" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576679714878" />
+    <state width="1877" height="327" key="GridCell.Tab.1.left" timestamp="1576679714878">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="327" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576679714878" />
+    <state width="1877" height="327" key="GridCell.Tab.1.right" timestamp="1576679714878">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="327" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576679714878" />
+    <state x="416" y="171" width="1280" height="717" key="SettingsEditor" timestamp="1576679640302">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="364" y="171" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1575603658381" />
+    <state x="416" y="171" width="1280" height="717" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1576679640302" />
+    <state x="652" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1576640351288">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="652" y="352" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576640351288" />
+    <state x="574" y="152" key="refactoring.ChangeSignatureDialog" timestamp="1575686444478">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="574" y="152" key="refactoring.ChangeSignatureDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1575686444478" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1576679671451">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1576679671451" />
+  </component>
+</project>

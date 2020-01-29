@@ -1,0 +1,5 @@
+Total games: 1
+           #   Pct
+Human      0   0.0
+Computer   1 100.0
+Draws      0   0.0

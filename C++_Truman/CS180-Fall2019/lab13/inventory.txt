@@ -1,0 +1,12 @@
+Thermistor,50,10,50
+Thyratron,2,1,10
+Inclinometer,4,2,4
+Rectifier,40,8,40
+Darlington NPN,15,4,15
+Yagi antenna,1,1,1
+MOSFET,100,10,100
+Nixie tube,5,1,5
+DIAC,10,5,10
+Klystron,3,5,10
+Stepping motor,2,1,2
+Piezoelectric crystal,4,15,50
