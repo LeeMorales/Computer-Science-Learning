@@ -170,6 +170,7 @@ class StudentCollection
     }
     // write a confirmation that the operation was successful
     cout << "Successfully saved";
+    output_file.close();
   }
 
 }; // studentcollection class ends
