@@ -118,15 +118,16 @@ class StudentCollection
     {
       if(student_records[index].getID() == search_id)
       {
-        cout<<endl<<"The record has been found: ";
+        cout << endl << "The record has been found: ";
         cout<< student_records[index].string_format();
         return index;
       }
+      else
+      {
+        cout << endl << "The record was not found: ";
+      }
     }
-
-    cout<<endl<<"The record was not found: ";
-    return - 1; // a negative value to indicate the record has not been found
-    
+  return - 1; // a negative value to indicate the record has not been found
   }
 
 
@@ -158,15 +159,16 @@ class StudentCollection
   
   // save all the record in the vector to a file
   void save_all_records()
-  { // TODO when this option is selected, 
-    // open the FILE_NAME in write mode
+  { // TODO when this option is selected, open the FILE_NAME in write mode
     ofstream output_file;
     output_file.open(FILE_NAME);
     // write each student object information in one single line in the file
     Student all_records;
+    string dummy;
     for(unsigned looptimes = 0; looptimes < student_records.size();looptimes++)
     {
       output_file << all_records.string_format(); 
+      getline(cin,dummy);
     }
     // write a confirmation that the operation was successful
     cout << "Successfully saved";
@@ -262,13 +264,5 @@ int main()
     }
 
   } while (choice != EXIT); // exit condition
-
-  
   return 0;
 }
-
-
-
-
-
-
