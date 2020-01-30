@@ -90,19 +90,22 @@ class StudentCollection
   void add_new_record()
   {
     // TODO input the values for the student record (id and name)
-    string id;
+    unsigned id;
     string name;
-    cout << endl << "Student ID: ";
-    getline(cin, id);
+    cout << "Student ID: ";
+    cin >> id;
+    string dummy;
+    getline(cin,dummy);
     cout << "Student Name: ";
     getline(cin, name);
+   
     
     // TODO use the public methods to initialize the student object
     Student newStudent;
 
     // add the object in the student records vector
-    newStudent.getName();
-    newStudent.getID();    
+    newStudent.setName(name);
+    newStudent.setID(id);    
   }
   
   
@@ -157,13 +160,13 @@ class StudentCollection
   void save_all_records()
   { // TODO when this option is selected, 
     // open the FILE_NAME in write mode
-    fstream file;
-    file.open(FILE_NAME);
+    ofstream output_file;
+    output_file.open(FILE_NAME);
     // write each student object information in one single line in the file
     Student all_records;
     for(unsigned looptimes = 0; looptimes < student_records.size();looptimes++)
     {
-      file << all_records.string_format(); 
+      output_file << all_records.string_format(); 
     }
     // write a confirmation that the operation was successful
     cout << "Successfully saved";
