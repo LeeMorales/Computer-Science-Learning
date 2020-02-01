@@ -90,19 +90,22 @@ class StudentCollection
   void add_new_record()
   {
     // TODO input the values for the student record (id and name)
-    string id;
+    unsigned id;
     string name;
-    cout << endl << "Student ID: ";
-    getline(cin, id);
+    cout << "Student ID: ";
+    cin >> id;
+    string dummy;
+    getline(cin,dummy);
     cout << "Student Name: ";
     getline(cin, name);
+   
     
     // TODO use the public methods to initialize the student object
     Student newStudent;
 
     // add the object in the student records vector
-    newStudent.getName();
-    newStudent.getID();    
+    newStudent.setName(name);
+    newStudent.setID(id);    
   }
   
   
@@ -115,15 +118,16 @@ class StudentCollection
     {
       if(student_records[index].getID() == search_id)
       {
-        cout<<endl<<"The record has been found: ";
+        cout << endl << "The record has been found: ";
         cout<< student_records[index].string_format();
         return index;
       }
+      else
+      {
+        cout << endl << "The record was not found: ";
+      }
     }
-
-    cout<<endl<<"The record was not found: ";
-    return - 1; // a negative value to indicate the record has not been found
-    
+  return - 1; // a negative value to indicate the record has not been found
   }
 
 
@@ -155,18 +159,20 @@ class StudentCollection
   
   // save all the record in the vector to a file
   void save_all_records()
-  { // TODO when this option is selected, 
-    // open the FILE_NAME in write mode
-    fstream file;
-    file.open(FILE_NAME);
+  { // TODO when this option is selected, open the FILE_NAME in write mode
+    ofstream output_file;
+    output_file.open(FILE_NAME);
     // write each student object information in one single line in the file
     Student all_records;
+    string dummy;
     for(unsigned looptimes = 0; looptimes < student_records.size();looptimes++)
     {
-      file << all_records.string_format(); 
+      output_file << all_records.string_format(); 
+      getline(cin,dummy);
     }
     // write a confirmation that the operation was successful
     cout << "Successfully saved";
+    output_file.close();
   }
 
 }; // studentcollection class ends
@@ -258,13 +264,5 @@ int main()
     }
 
   } while (choice != EXIT); // exit condition
-
-  
   return 0;
 }
-
-
-
-
-
-
