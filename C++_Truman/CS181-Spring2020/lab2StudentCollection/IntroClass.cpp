@@ -105,7 +105,8 @@ class StudentCollection
 
     // add the object in the student records vector
     newStudent.setName(name);
-    newStudent.setID(id);    
+    newStudent.setID(id); 
+    student_records.push_back(newStudent);   
   }
   
   
