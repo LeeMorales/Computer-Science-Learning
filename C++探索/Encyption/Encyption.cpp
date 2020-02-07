@@ -12,7 +12,7 @@ using namespace std;
  * #param separator	: 十六进制字符串间的分隔符
  * #return	: 接收转换后的字符串
  */
-string strToHex(string str, string separator = " ");
+string strToHex(string str);
 
 
 int main()
@@ -25,13 +25,13 @@ int main()
   return 0;
 }
 
-string strToHex(string str, string separator = " ")
+string strToHex(string str)
 {
 	const string hex = "0123456789ABCDEF";
   stringstream ss;
  
 	for (string::size_type i = 0; i < str.size(); ++i)
-		ss << hex[(unsigned char)str[i] >> 4] << hex[(unsigned char)str[i] & 0xf] << separator;
+		ss << hex[(unsigned char)str[i] >> 4] << hex[(unsigned char)str[i] & 0xf] << " ";
 	
 	return ss.str();
 }
