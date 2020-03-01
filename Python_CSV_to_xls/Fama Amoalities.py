@@ -15,7 +15,7 @@ import math as m
 
 
 
-filename = "/Users/leemiles/Downloads/25_Portfolios_ME_BETA_5x5.csv"
+filename = "/Users/leemiles/Computer-Science-Learning/Python_CSV_to_xls/1.csv"
 f=open(filename)
 data = pd.read_csv(filename)
 
@@ -41,12 +41,12 @@ data={'':['Mean','SD','t-statistic'],
 
 pd.DataFrame(data).to_excel('output.xlsx', header=False, index=False)
 
-filename1 = "/Users/leemiles/Downloads/25_Portfolios_ME_BETA_5x5.csv"
+filename1 = "/Users/leemiles/Computer-Science-Learning/Python_CSV_to_xls/1.csv"
 with open(filename1) as fd:
     reader=pd.read_csv(fd)
     interestingrows=[row for idx, row in enumerate(reader) if idx in (16,1379)]
 
-filename1 = "/Users/leemiles/Downloads/25_Portfolios_ME_BETA_5x5.csv"
+filename1 = "/Users/leemiles/Computer-Science-Learning/Python_CSV_to_xls/1.csv"
 with open(filename1) as fd:
     reader=pd.read_csv(fd)
 def read(self, nrows=1400):
