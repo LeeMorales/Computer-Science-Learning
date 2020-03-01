@@ -12,11 +12,11 @@ import math as m
 # For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory
 
 
+import pandas as pd
 filename = "/Users/leemiles/Computer-Science-Learning/Python_CSV_to_xls/1.csv"
-f=open(filename)
-data = pd.read_csv(filename, error_bad_lines=False)
+data = pd.read_csv(filename, header = 9)
 
-data.head(8)
+data.head(20)
 
 data.drop(["Date"],axis = 1)
 
