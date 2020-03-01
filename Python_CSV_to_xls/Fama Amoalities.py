@@ -12,9 +12,6 @@ import math as m
 # For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory
 
 
-
-
-
 filename = "/Users/leemiles/Computer-Science-Learning/Python_CSV_to_xls/1.csv"
 f=open(filename)
 data = pd.read_csv(filename)
