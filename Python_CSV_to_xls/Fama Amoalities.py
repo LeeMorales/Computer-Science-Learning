@@ -19,32 +19,15 @@ filename = "/Users/leemiles/Downloads/25_Portfolios_ME_BETA_5x5.csv"
 f=open(filename)
 data = pd.read_csv(filename)
 
-
 data.head(8)
 
-
-
-
 data.drop(["Date"],axis = 1)
-
-
 
 Mean=[data['Mkt-RF'].mean(),data['SMB'].mean(),data['HML'].mean(),data['RMW'].mean(),data['CMA'].mean(),data['RF'].mean(),data['MOM'].mean()]
 SD=[np.std(data['Mkt-RF']),np.std(data['SMB']),np.std(data['HML']),np.std(data['RMW']),np.std(data['CMA']),np.std(data['RF']),np.std(data['MOM'])]
 
-
-
-
-
-
-
-
-
 tstat1=Mean[0]* m.sqrt(678)/SD[0]; tstat2=Mean[1]* m.sqrt(678)/SD[1]; tstat3= Mean[2]* m.sqrt(678)/SD[2];tstat4=Mean[3]* m.sqrt(678)/SD[3];
 tstat5=Mean[4]* m.sqrt(678)/SD[4];tstat6=Mean[5]* m.sqrt(678)/SD[5];tstat7=Mean[6]* m.sqrt(678)/SD[6]
-
-
-
 
 data={'':['Mean','SD','t-statistic'],
       'RM-RF':[Mean[0],SD[0],tstat1],
@@ -58,13 +41,10 @@ data={'':['Mean','SD','t-statistic'],
 
 pd.DataFrame(data).to_excel('output.xlsx', header=False, index=False)
 
-
 filename1 = "/Users/leemiles/Downloads/25_Portfolios_ME_BETA_5x5.csv"
 with open(filename1) as fd:
     reader=pd.read_csv(fd)
     interestingrows=[row for idx, row in enumerate(reader) if idx in (16,1379)]
-
-
 
 filename1 = "/Users/leemiles/Downloads/25_Portfolios_ME_BETA_5x5.csv"
 with open(filename1) as fd:
