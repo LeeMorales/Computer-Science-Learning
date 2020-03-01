@@ -14,7 +14,7 @@ import math as m
 
 filename = "/Users/leemiles/Computer-Science-Learning/Python_CSV_to_xls/1.csv"
 f=open(filename)
-data = pd.read_csv(filename)
+data = pd.read_csv(filename, error_bad_lines=False)
 
 data.head(8)
 
