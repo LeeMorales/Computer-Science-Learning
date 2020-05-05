@@ -1,36 +1,44 @@
 {
     "configurations": [
         {
-            "name": "Mac",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "macFrameworkPath": [
-                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
-            ],
-            "compilerPath": "/usr/bin/clang",
-            "cStandard": "c11",
-            "cppStandard": "c++11",
-            "intelliSenseMode": "clang-x64",
-            "configurationProvider": "go2sh.cmake-integration"
-        }
-    ],
-    "version": 4,
-
-    "configurations": [
-        {
             "name": "Win32",
             "includePath": [
                 "C:/Program Files/mingw64/include"
             ],
-            "defines": 
-            [
+            "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "intelliSenseMode": "gcc-x64"
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "C:/Program Files/LLVM/bin/clang.exe",
+            "compilerArgs": [
+                "-std=c++11"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "browse": {
+                "path": [
+                    "C:/Program Files/mingw64/include",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "MAC",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
         }
     ],
     "version": 4
