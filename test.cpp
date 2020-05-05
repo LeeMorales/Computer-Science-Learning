@@ -22,4 +22,10 @@ size_t find_minimum(vector<int> vector_of_values)
   }
   return smallest;
 }
-P
+
+int main()
+{
+  vector<int> vector_of_values;
+  find_minimum(vector_of_values);
+  return 0;
+}
