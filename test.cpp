@@ -33,22 +33,17 @@ int get_rand_in_range(int low_limit, int high_limit)
   return random_number;
 }
 
-size_t find_minimum(vector<int> vector_of_values)
+size_t find_minimum(vector<int> values)
 {
-  const unsigned MAX = 0;
-  const unsigned MIN = 100;
-  int smallest = MIN;
-  int biggest = MAX;
-  for (unsigned looptimes = 0; looptimes < vector_of_values.size(); looptimes++)
+  int min = values[0];
+  size_t min_index = 0;
+  for (size_t index = 0; index < values.size(); index++)
   {
-    if(vector_of_values.at(looptimes) > biggest && vector_of_values.at(looptimes) < smallest)
+    if (values[index] < min)
     {
-      smallest = vector_of_values.at(looptimes);
-    }
-    else
-    {
-      biggest = vector_of_values.at(looptimes);
+      min = values[index];
+      min_index = index;
     }
   }
-  return smallest;
+  return min_index;
 }
