@@ -11,7 +11,7 @@ int main()
   int seed = (time(nullptr));
   srand(seed);
   const int low = 1;
-  const int high = 100;
+  const int high = 10;
   vector<int> vector_of_values;
   for(unsigned loop = 0; loop < high; loop++)
   {
@@ -23,7 +23,7 @@ int main()
     cout << vector_of_values.at(looptimes) << " ";
   }
   int min = find_minimum(vector_of_values);
-  cout << endl << "The minium value is: " << min;
+  cout << endl << "The minium value at the index is: " << min;
   return 0;
 }
 
