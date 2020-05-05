@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "C:/Program Files/mingw64/include",
-                "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/include"
+                "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/include",
+                "C:/Program Files/boost_1_71_0/boost"
             ],
             "defines": [
                 "_DEBUG",
@@ -22,6 +23,7 @@
                 "path": [
                     "C:/Program Files/mingw64/include",
                     "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/include",
+                    "C:/Program Files/boost_1_71_0/boost",
                     "${workspaceFolder}"
                 ],
                 "limitSymbolsToIncludedHeaders": true
