@@ -11,8 +11,7 @@ int main()
 {
   const unsigned HIGHEST_SCORE = 100;
   const unsigned LOWEST_SCORE = 0;
-
-                                                             //打开文件
+//打开文件
   ifstream input_file;
   input_file.open("scores.txt");
   ofstream output_file;
