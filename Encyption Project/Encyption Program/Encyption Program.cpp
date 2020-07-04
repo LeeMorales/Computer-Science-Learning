@@ -13,13 +13,24 @@ int main()
   unsigned number_of_digits;
   cout << "How many digits of your password?" << endl;
   string* user_keychain = new string[number_of_digits];
-  cout << "Please input the password that you want to encypted: ";
-  string password;
-  getline(cin, password);
 
-  //拆分用户密码并放入Vector
+  //用户密钥输入并存入Array
+  cout << "Please input the password that you want to encypted one key in once: ";
+  string chain;
+  for (unsigned looptimes = 0; looptimes < number_of_digits; looptimes++)
+  {
+    cin >> chain;
+    user_keychain[looptimes] = chain;
+  }
+  vector<string> keychain;
+  for (unsigned looptimes = 0; looptimes < number_of_digits; looptimes++)
+  {
+    keychain.at(looptimes) = user_keychain[looptimes];
+  }
+  cout << "Starting the caesar encyption, please type the public key" << endl;
+  unsigned moveDigits;
+  cin >> moveDigits;
 
-  
 
 }
 
