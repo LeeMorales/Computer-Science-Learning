@@ -113,3 +113,8 @@ double calculation(unsigned colombian_quantity, unsigned deca_quantity, unsigned
 
   return amount_colom_supr, amount_organ_gold, amount_heavn_chai;
 }
+
+void output()
+{
+     
+}
