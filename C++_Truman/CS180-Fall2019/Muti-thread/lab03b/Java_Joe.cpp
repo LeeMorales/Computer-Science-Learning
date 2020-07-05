@@ -8,7 +8,15 @@
 #include <iomanip>
 #include <cstdlib>
 #include <thread>
+
 using namespace std;
+
+/**
+ * This function is to get the numer in random
+ * @param seed is to generate the seed value for the random number
+ * @param bonus_discount is the random bonus number that generated.
+ */
+void get_random_bonus(unsigned seed, double bonus_discount);
 
 int main() 
 {
@@ -71,5 +79,10 @@ int main()
   cout << endl << "Thank you for your ordering !" << endl;
 
   return 0;
+
+}
+
+void get_random_bonus(unsigned seed, double bonus_discount)
+{
 
 }
