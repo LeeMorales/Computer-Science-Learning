@@ -13,10 +13,11 @@ using namespace std;
 
 /**
  * This function is to get the numer in random
- * @param seed is to generate the seed value for the random number
- * @param bonus_discount is the random bonus number that generated.
+ * @param MAX_VALUE is the max limit of the random number
+ * @param MIN_VALUE is the min limit of the random number
+ * @return the random number that generated.
  */
-void get_random_bonus(unsigned seed, double bonus_discount);
+double get_random_bonus(const unsigned MAX_VALUE, const unsigned MIN_VALUE);
 
 int main() 
 {
@@ -68,21 +69,23 @@ int main()
   cout << endl << "Total:        " << setw(LABEL_WIDTH_COLOM)
        << total << endl;
 
-
-  unsigned seed = static_cast<unsigned int>(time(nullptr));
-  srand(seed);
-  double bonus_discount = static_cast<double>(rand() % (MAX_VALUE - MIN_VALUE + 1) + MIN_VALUE);
+  double bonus = get_random_bonus(MAX_VALUE, MIN_VALUE);     
   cout << "Bonus Discount" << setw(LABEL_WIDTH_COLOM)
-       << bonus_discount << endl;
+       << bonus << endl;
   cout << "Grand Total   " << setw(LABEL_WIDTH_COLOM)
-       << total - bonus_discount << endl;
+       << total - bonus << endl;
   cout << endl << "Thank you for your ordering !" << endl;
 
   return 0;
 
 }
 
-void get_random_bonus(unsigned seed, double bonus_discount)
+double get_random_bonus(const unsigned MAX_VALUE, const unsigned MIN_VALUE)
 {
+     
+     unsigned seed = static_cast<unsigned int>(time(nullptr));
+     srand(seed);
+     double bonus_discount = static_cast<double>(rand() % (MAX_VALUE - MIN_VALUE + 1) + MIN_VALUE);
 
+     return bonus_discount;
 }
