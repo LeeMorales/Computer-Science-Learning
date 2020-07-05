@@ -10,7 +10,8 @@
 #include <thread>
 using namespace std;
 
-int main() {
+int main() 
+{
   const double UNIT_PRICE_COLOMBIAN= 0.35;
   const double UNIT_PRICE_DECAF = 0.85;
   const double UNIT_PRICE_CHAI= 1.10;
@@ -33,14 +34,10 @@ int main() {
   cin >> colombian_quantity >> deca_quantity >> chai_quantity;
   cout << endl << "Invoice for Fred Flintstone" << endl;
 
-  double amount_colom_supr;
-  amount_colom_supr =  colombian_quantity * UNIT_PRICE_COLOMBIAN;
-  double amount_organ_gold;
-  amount_organ_gold =  deca_quantity * UNIT_PRICE_DECAF;
-  double amount_heavn_chai;
-  amount_heavn_chai =  chai_quantity * UNIT_PRICE_CHAI;
-  double total;
-  total =  amount_colom_supr + amount_organ_gold + amount_heavn_chai;
+  double amount_colom_supr =  colombian_quantity * UNIT_PRICE_COLOMBIAN;
+  double amount_organ_gold =  deca_quantity * UNIT_PRICE_DECAF;
+  double amount_heavn_chai =  chai_quantity * UNIT_PRICE_CHAI;
+  double total =  amount_colom_supr + amount_organ_gold + amount_heavn_chai;
 
   cout << "                  Colom Supr  Organ Gold  Heavn Chai" << endl;
   cout << "                  ----------  ----------  ----------" << endl;
@@ -66,9 +63,7 @@ int main() {
 
   unsigned seed = static_cast<unsigned int>(time(nullptr));
   srand(seed);
-  double bonus_discount
-       = static_cast<double>(rand() % (MAX_VALUE - MIN_VALUE + 1)
-       + MIN_VALUE);
+  double bonus_discount = static_cast<double>(rand() % (MAX_VALUE - MIN_VALUE + 1) + MIN_VALUE);
   cout << "Bonus Discount" << setw(LABEL_WIDTH_COLOM)
        << bonus_discount << endl;
   cout << "Grand Total   " << setw(LABEL_WIDTH_COLOM)
