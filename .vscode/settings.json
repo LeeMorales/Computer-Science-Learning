@@ -30,9 +30,10 @@
     "cSpell.words": [
         "if"
     ],
-    "python.pythonPath": "/usr/local/bin/python3",
+    "python.pythonPath": "C:\\Users\\Miles Lee\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
     "files.associations": {
         "iosfwd": "cpp"
     },
+    "cmake.sourceDirectory": "${workspaceFolder}/C++_Truman/CS180-Fall2019/lab13",
 }

@@ -27,7 +27,8 @@
                     "${workspaceFolder}"
                 ],
                 "limitSymbolsToIncludedHeaders": true
-            }
+            },
+            "configurationProvider": "ms-vscode.cmake-tools"
         },
         {
             "name": "MAC",
