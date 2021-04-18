@@ -1,9 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab13.dir/structures.cpp.obj"
-  "lab13.exe"
-  "lab13.exe.manifest"
+  "CMakeFiles/lab13.dir/structures.cpp.o"
+  "CMakeFiles/lab13.dir/structures.cpp.o.d"
+  "lab13"
   "lab13.pdb"
-  "liblab13.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

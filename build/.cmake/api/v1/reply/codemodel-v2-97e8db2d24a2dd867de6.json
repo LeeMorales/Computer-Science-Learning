@@ -38,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "lab13::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lab13-Debug-ca9f577931151d18bfb8.json",
+					"jsonFile" : "target-lab13-Debug-44990b5bfb7867ddf8a6.json",
 					"name" : "lab13",
 					"projectIndex" : 0
 				}
@@ -48,8 +48,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/CS-Related/Computer-Science-Learning/build",
-		"source" : "D:/CS-Related/Computer-Science-Learning/C++_Truman/CS180-Fall2019/lab13"
+		"build" : "/Users/AKIRA/ComputerScienceRelated/Computer-Science-Learning/build",
+		"source" : "/Users/AKIRA/ComputerScienceRelated/Computer-Science-Learning/C++_Truman/CS180-Fall2019/lab13"
 	},
 	"version" : 
 	{

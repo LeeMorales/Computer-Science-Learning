@@ -1,7 +1,7 @@
 [
 {
-  "directory": "D:/CS-Related/Computer-Science-Learning/build",
-  "command": "C:\\PROGRA~1\\mingw64\\bin\\G__~1.EXE   -g -std=gnu++11 -o CMakeFiles\\lab13.dir\\structures.cpp.obj -c D:\\CS-Related\\Computer-Science-Learning\\C++_Truman\\CS180-Fall2019\\lab13\\structures.cpp",
-  "file": "D:/CS-Related/Computer-Science-Learning/C++_Truman/CS180-Fall2019/lab13/structures.cpp"
+  "directory": "/Users/AKIRA/ComputerScienceRelated/Computer-Science-Learning/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/lab13.dir/structures.cpp.o -c /Users/AKIRA/ComputerScienceRelated/Computer-Science-Learning/C++_Truman/CS180-Fall2019/lab13/structures.cpp",
+  "file": "/Users/AKIRA/ComputerScienceRelated/Computer-Science-Learning/C++_Truman/CS180-Fall2019/lab13/structures.cpp"
 }
 ]

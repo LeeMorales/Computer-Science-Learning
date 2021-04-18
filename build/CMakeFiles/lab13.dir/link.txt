@@ -1,3 +1,1 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\lab13.dir/objects.a
-C:\PROGRA~1\mingw64\bin\ar.exe cr CMakeFiles\lab13.dir/objects.a @CMakeFiles\lab13.dir\objects1.rsp
-C:\PROGRA~1\mingw64\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\lab13.dir/objects.a -Wl,--no-whole-archive -o lab13.exe -Wl,--out-implib,liblab13.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\lab13.dir\linklibs.rsp
+/usr/bin/clang++ -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/lab13.dir/structures.cpp.o -o lab13 

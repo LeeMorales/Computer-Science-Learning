@@ -1,15 +1,14 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/CS-Related/Computer-Science-Learning/C++_Truman/CS180-Fall2019/lab13/structures.cpp" "D:/CS-Related/Computer-Science-Learning/build/CMakeFiles/lab13.dir/structures.cpp.obj"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/AKIRA/ComputerScienceRelated/Computer-Science-Learning/C++_Truman/CS180-Fall2019/lab13/structures.cpp" "CMakeFiles/lab13.dir/structures.cpp.o" "gcc" "CMakeFiles/lab13.dir/structures.cpp.o.d"
   )
 
 # Targets to which this target links.
