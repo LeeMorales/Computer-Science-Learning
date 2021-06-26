@@ -1,3 +1,0 @@
-/Users/AKIRA/ComputerScienceRelated/Computer-Science-Learning/build/CMakeFiles/rebuild_cache.dir
-/Users/AKIRA/ComputerScienceRelated/Computer-Science-Learning/build/CMakeFiles/edit_cache.dir
-/Users/AKIRA/ComputerScienceRelated/Computer-Science-Learning/build/CMakeFiles/lab13.dir

@@ -1,1 +1,0 @@
-/usr/bin/clang++ -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/lab13.dir/structures.cpp.o -o lab13 
